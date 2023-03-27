@@ -1,8 +1,15 @@
 [
   {
+    "objectID": "services.html",
+    "href": "services.html",
+    "title": "Services",
+    "section": "",
+    "text": "Services offered - One on one consultancy - Research help"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "KabroAI - Inder Preet",
+    "title": "Inder Preet",
     "section": "",
     "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
@@ -18,6 +25,13 @@
     "href": "portfolio.html",
     "title": "Portfolio",
     "section": "",
-    "text": "About this site"
+    "text": "Portfolio of Inder Preet"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Blog posts"
   }
 ]

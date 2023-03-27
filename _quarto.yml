@@ -10,6 +10,8 @@ website:
         text: Home
       - about.qmd
       - portfolio.qmd
+      - blog.qmd
+      - services.qmd
 
 format:
   html:
