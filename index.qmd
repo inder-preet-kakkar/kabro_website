@@ -1,5 +1,5 @@
 ---
-title: "KabroAI - kabro_website"
+title: "KabroAI - Inder Preet"
 ---
 
 This is a Quarto website.
