@@ -1,5 +1,5 @@
 ---
 title: "Portfolio"
+listing:
+  contents: portfolio
 ---
-
-Portfolio of Inder Preet
