@@ -1,1 +1,4 @@
-Details about
+---
+title: "Edge AI"
+from: markdown+emoji
+---

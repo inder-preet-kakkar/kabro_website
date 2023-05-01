@@ -7,38 +7,31 @@
     "text": "Services offered - One on one consultancy - Research help"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Inder Preet",
-    "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "portfolio/edgeAI.html",
-    "href": "portfolio/edgeAI.html",
-    "title": "KabroAI",
-    "section": "",
-    "text": "Details about"
+    "text": "Welcome to my website, KabroAI! My name is Inder Preet and I’m a data scientist interested in algorithms and models specializing in Edge AI, a cutting-edge technology that brings machine learning and artificial intelligence to devices at the edge of the network. It involves developing intelligent systems that run on devices with limited computing resources, such as smartphones, robots, wearables, and IoT sensors.\nIn addition to my work in Edge AI, I have worked on a lot of other things, like, time-series analysis, AI for Earth Observation, Privacy Preserving ML and most recently optimization for energy management in buildings. Checkout my portfolio for more information on all these. \nI believe that personal and professional lives are complexly intertwined, so instead of creating a solely professional website, this one is a mix of both and you will see the two themes across the portfolio and blog. The same goes for the name KabroAI, which comes from my family’s business of selling motor parts. But won’t deny it is also a catchy name 😉.\n\nGet in touch\nIf you’re interested in learning more about Edge AI or collaborating on a project, please don’t hesitate to get in touch. I’m always excited to connect with like-minded individuals and organizations who share my passion for bringing intelligent systems to the edge of the network.\nContact: singhinderpreet1995[at]gmail[dot]com"
   },
   {
     "objectID": "portfolio.html",
     "href": "portfolio.html",
     "title": "Portfolio",
     "section": "",
-    "text": "No matching items"
+    "text": "Edge AI\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nPrivacy Preserving Machine Learning\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nWind speed hindcasting\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "blog.html",
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "No matching items"
+    "text": "Working on it, stay tuned!\n\n\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "About",
+    "section": "",
+    "text": "Welcome to my website, KabroAI! My name is Inder Preet and I’m a data scientist interested in algorithms and models specializing in Edge AI, a cutting-edge technology that brings machine learning and artificial intelligence to devices at the edge of the network. It involves developing intelligent systems that run on devices with limited computing resources, such as smartphones, robots, wearables, and IoT sensors.\nIn addition to my work in Edge AI, I have worked on a lot of other things, like, time-series analysis, AI for Earth Observation, Privacy Preserving ML and most recently optimization for energy management in buildings. Checkout my portfolio for more information on all these. \nI believe that personal and professional lives are complexly intertwined, so instead of creating a solely professional website, this one is a mix of both and you will see the two themes across the portfolio and blog. The same goes for the name KabroAI, which comes from my family’s business of selling motor parts. But won’t deny it is also a catchy name 😉.\n\nGet in touch\nIf you’re interested in learning more about Edge AI or collaborating on a project, please don’t hesitate to get in touch. I’m always excited to connect with like-minded individuals and organizations who share my passion for bringing intelligent systems to the edge of the network.\nContact: singhinderpreet1995[at]gmail[dot]com"
   }
 ]

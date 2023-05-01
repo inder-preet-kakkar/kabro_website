@@ -8,17 +8,19 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - about.qmd
+        text: About
+#      - index.qmd
       - portfolio.qmd
-#      - blog.qmd
+      - blog.qmd
+      - cv.qmd
 #      - services.qmd
 
 format:
   html:
     theme: cosmo
     css: styles.css
-    toc: true
+    toc: false
+
 
 
 

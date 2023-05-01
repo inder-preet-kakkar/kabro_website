@@ -70,9 +70,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -96,7 +96,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -115,15 +115,19 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./portfolio.html" rel="" target="" aria-current="page">
  <span class="menu-text">Portfolio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./blog.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./cv.html" rel="" target="">
+ <span class="menu-text">Curriculum Vitae</span></a>
   </li>  
 </ul>
             <div class="quarto-navbar-tools ms-auto">
@@ -136,9 +140,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -165,12 +167,80 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1682379056312" data-listing-reading-time-sort="0">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1682936953351" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./portfolio/edgeAI.html"> <div class="listing-item-img-placeholder" >&nbsp;</div> </a></p>
+</div>
+<div class="body">
+<a href="./portfolio/edgeAI.html">
+<h3 class="no-anchor listing-title">
+Edge AI
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./portfolio/edgeAI.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1682943488240" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./portfolio/ppml.html"> <div class="listing-item-img-placeholder" >&nbsp;</div> </a></p>
+</div>
+<div class="body">
+<a href="./portfolio/ppml.html">
+<h3 class="no-anchor listing-title">
+Privacy Preserving Machine Learning
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./portfolio/ppml.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1682937054603" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./portfolio/brightwind.html"> <div class="listing-item-img-placeholder" >&nbsp;</div> </a></p>
+</div>
+<div class="body">
+<a href="./portfolio/brightwind.html">
+<h3 class="no-anchor listing-title">
+Wind speed hindcasting
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./portfolio/brightwind.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1682379056312" data-listing-reading-time-sort="0">
 <div class="thumbnail">
 <p><a href="./portfolio/timeseries.html"> <div class="listing-item-img-placeholder" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
 <a href="./portfolio/timeseries.html">
+<h3 class="no-anchor listing-title">
+</h3>
+<div class="listing-subtitle">
+
+</div>
 <div class="listing-description">
 
 </div>
@@ -178,21 +248,6 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="metadata">
 <a href="./portfolio/timeseries.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1682379661597" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./portfolio/edgeAI.html"> <div class="listing-item-img-placeholder" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./portfolio/edgeAI.html">
-<div class="listing-description">
-Details about
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./portfolio/edgeAI.html"> </a>
 </div>
 </div>
 </div>
