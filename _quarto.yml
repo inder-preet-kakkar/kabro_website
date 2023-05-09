@@ -4,7 +4,7 @@ project:
 
 website:
   title: "KabroAI"
-  site-url: https://www.kabroai.ie/
+  site-url: https://inder-preet-kakkar.github.io/kabro_website/
   navbar:
     left:
       - href: index.qmd
