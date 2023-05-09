@@ -12,7 +12,7 @@ website:
 #      - index.qmd
       - portfolio.qmd
       - blog.qmd
-      - cv.qmd
+      -
 #      - services.qmd
 
 format:
