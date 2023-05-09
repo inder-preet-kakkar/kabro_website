@@ -1,4 +1,4 @@
 ---
-title: "Wind speed hindcasting"
+title: "Wind Energy Analysis"
 from: markdown+emoji
 ---

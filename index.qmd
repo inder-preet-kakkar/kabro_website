@@ -14,17 +14,31 @@ In addition to my work in Edge AI, I have worked on a lot of other things, like,
 Checkout my [portfolio](portfolio.qmd) for more information on all these.
 <br>
 
+<!---
 I believe that personal and professional lives are complexly intertwined, so instead of creating a solely professional website, this one is a mix of both and you will see the
 two themes across the [portfolio](portfolio.qmd) and [blog](blog.qmd).
 The same goes for the name KabroAI, which comes from my family's business of selling motor parts. But won't deny it is also a catchy name :wink:.
-
+-->
 ### Get in touch
 If you're interested in learning more about Edge AI or collaborating on a project, please don't hesitate to get in touch. I'm always excited to connect with like-minded individuals and organizations who share my passion for bringing intelligent systems to the edge of the network.
 
 **Contact**: singhinderpreet1995[at]gmail[dot]com
 
 
+::: {.column-page-inset .text-center}
+```{=html}
 
+<a class="btn" href="https://www.linkedin.com/in/inder-preet-kakkar/" target="_blank" rel="noopener noreferrer">
+<img src="https://img.shields.io/badge/-LinkedIn-306EA8?style=flat&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/inder-preet-kakkar/"/>
+</a>
+<a class="btn" href="https://github.com/inder-preet-kakkar" target="_blank" rel="noopener noreferrer">
+<img src="https://img.shields.io/badge/-GitHub-2F2F2F?style=flat&logo=github&logoColor=white&link=https://github.com/inder-preet-kakkar"/>
+</a>
+<a class="btn" href="https://scholar.google.com/citations?hl=en&user=0uFpuSMAAAAJ;hl=en" target="_blank" rel="noopener noreferrer">
+<img src="https://img.shields.io/badge/-Google_Scholar-676767?style=flat&logo=google-scholar&logoColor=white&link=https://scholar.google.com/citations?hl=en&user=0uFpuSMAAAAJ;hl=en"/>
+</a>
+```
+:::
 
 
 

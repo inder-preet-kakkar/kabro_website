@@ -1,0 +1,4 @@
+---
+title: "AI for Earth Observation"
+from: markdown+emoji
+---
