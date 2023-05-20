@@ -1,0 +1,19 @@
+[
+  {
+    "listing": "/portfolio.html",
+    "items": [
+      "/portfolio/AI4EO.html",
+      "/portfolio/edgeAI.html",
+      "/portfolio/ppml.html",
+      "/portfolio/sonalake.html",
+      "/portfolio/brightwind.html"
+    ]
+  },
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/blog/post1.html",
+      "/blog/post2.html"
+    ]
+  }
+]
