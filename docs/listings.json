@@ -2,8 +2,8 @@
   {
     "listing": "/portfolio.html",
     "items": [
-      "/portfolio/AI4EO.html",
       "/portfolio/edgeAI.html",
+      "/portfolio/AI4EO.html",
       "/portfolio/ppml.html",
       "/portfolio/sonalake.html",
       "/portfolio/brightwind.html"

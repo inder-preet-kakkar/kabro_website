@@ -1,4 +1,5 @@
 ---
 title: "Privacy Preserving Machine Learning"
+order: 3
 from: markdown+emoji
 ---

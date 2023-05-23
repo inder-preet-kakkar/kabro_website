@@ -2,4 +2,10 @@
 title: "Portfolio"
 listing:
   contents: portfolio
+  type: grid
+  grid-columns: 2
+  grid-item-align: center
+  sort:
+    - "order asc"
+
 ---
