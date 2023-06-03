@@ -131,27 +131,61 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 <section id="summary" class="level3">
 <h3 class="anchored" data-anchor-id="summary">Summary</h3>
+<p>Developed standards and specifications for European Space Agency and worked on image segmentation for EO data.</p>
 </section>
 <section id="the-story" class="level3">
 <h3 class="anchored" data-anchor-id="the-story">The story</h3>
-<p><img src="../images/edgeai_pruning.png" width="95%"></p>
-<p>I also collaborated with UCD Laboratory for <a href="https://www.ucd.ie/lams/">Advanced Manufacturing Simulation and Robotics</a> to review edge AI techniques for collaborative robots. The review paper can be found <a href="https://www.sciencedirect.com/science/article/pii/S2212827122003961">here</a>.</p>
+<p>Earth Observation (EO) data, comprising of data coming from satellites or drones presents vast opportunities for industry and AI. As such, we worked on <a href="https://eo4society.esa.int/projects/aireo/">AIREO</a> with European Space Agency to formulate specifications and standards for EO data so that it can be easily used by the AI community.</p>
+We gathered surveys from the community and then specified standards for EO data including what metadata should be present and how can we make it easier to ingest EO data into tools commonly used by AI practitioners. Best practices on how to train ML algorithms on EO data were also laid down.
+<center>
+<figure class="figure">
+<img src="../images/high_level_summary.png" width="95%" class="figure-img">
+<figcaption class="figure-caption">
+<center>
+Fig. 1: Different facets of EO data covered by AIREO specifications
+</center>
+</figcaption>
+</figure>
+</center>
+We also worked on the problem of image segmentation in satellite images. Figure below shows a satellite image on the left with segmentation map consisting of roads, water, buildings and forest.
+<center>
+<figure class="figure">
+<img src="../images/sate_image.png" class="figure-img">
+<figcaption class="figure-caption">
+<center>
+Fig. 2: Satellite image on the left with segmentation map showing roads, water, buildings and forest on the right.
+</center>
+</figcaption>
+</figure>
+</center>
+<p>A common problem with segmentation in satellite images is that often the ground truth is not completely labelled, e.g., some roads might be left out of the labels in training data. Training a deep neural network becomes difficult as we do not have the complete ground truth, as such we need to design the loss function such that if we are confident enough in some prediction we incorporate that in ground truth. To do that we use GANs (Generative Adversarial Networks) and borrow ideas from two different studies, <a href="https://arxiv.org/abs/1505.04597">UNet</a> and one by <a href="https://arxiv.org/abs/1908.05724">Mittal et. al.</a> Additional terms to the loss function were added and some modifications to the latter’s pipeline were done. These modifications yielded better segmentation accuracy for some classes in the dataset.</p>
+<center>
+<figure class="figure">
+<img src="../images/gan_modifications.png" width="80%" class="figure-img">
+<figcaption class="figure-caption">
+<center>
+Fig. 3: Modifications made to GAN: Added additional loss terms, removed a branch. Image source from Mittal et. al.&nbsp;
+</center>
+</figcaption>
+</figure>
+</center>
 <hr>
 </section>
 <section id="important-links" class="level3">
 <h3 class="anchored" data-anchor-id="important-links">Important links</h3>
-<section id="publications" class="level4">
-<h4 class="anchored" data-anchor-id="publications">Publications</h4>
+<section id="link-to-european-space-agencys-aireo-project" class="level4">
+<h4 class="anchored" data-anchor-id="link-to-european-space-agencys-aireo-project">Link to European Space Agency’s AIREO project</h4>
+<p><a href="https://eo4society.esa.int/projects/aireo/">https://eo4society.esa.int/projects/aireo/</a></p>
 </section>
-<section id="videos" class="level4">
-<h4 class="anchored" data-anchor-id="videos">Videos</h4>
+<section id="link-to-ceadars-ai-for-earth-observation-demonstrator" class="level4">
+<h4 class="anchored" data-anchor-id="link-to-ceadars-ai-for-earth-observation-demonstrator">Link to CeADAR’s AI for Earth Observation demonstrator</h4>
+<p><a href="https://ceadar.ie/blog/ai-for-earth-observation/">https://ceadar.ie/blog/ai-for-earth-observation/</a></p>
+</section>
+<section id="publication" class="level4">
+<h4 class="anchored" data-anchor-id="publication">Publication</h4>
 <ol type="1">
-<li><a href="https://www.youtube.com/watch?v=MV_n0z0dCE4">CeADAR Demonstrator: Edge AI</a></li>
-<li><a href="https://www.youtube.com/watch?v=wJgGkBhb9v4">Hardware for Machine Learning</a></li>
+<li>Alastair McKinstry, Oisin Boydell, Quan Le, Inder Preet, Jennifer Hanafin, Manuel Fernandez, Adam Warde, Venkatesh Kannan, and Patrick Griffiths, “AI-Ready Training Datasets for Earth Observation: Enabling FAIR data principles for EO training data”. EGU General Assembly, 2021, <a href="https://meetingorganizer.copernicus.org/EGU21/EGU21-12384.html">link</a>.</li>
 </ol>
-</section>
-<section id="link-to-ceadars-edge-ai-demonstrator---httpsceadar.ieblogedge-ai" class="level4">
-<h4 class="anchored" data-anchor-id="link-to-ceadars-edge-ai-demonstrator---httpsceadar.ieblogedge-ai">Link to CeADAR’s Edge AI demonstrator - <a href="https://ceadar.ie/blog/edge-ai/">https://ceadar.ie/blog/edge-ai/</a></h4>
 
 
 </section>

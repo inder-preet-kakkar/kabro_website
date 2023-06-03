@@ -2,28 +2,65 @@
 title: <b>AI for Earth Observation</b>
 order: 2
 from: markdown+emoji
-image: ../images/aireo_thumbnail.jpeg
+image: ../images/sate_image.png
 
 ---
 _____________
 ### Summary
-
+Developed standards and specifications for European Space Agency and worked on image segmentation for EO data.
 
 ### The story
+Earth Observation (EO) data, comprising of data coming from satellites or drones presents vast opportunities for
+industry and AI. As such, we worked on [AIREO](https://eo4society.esa.int/projects/aireo/) with European Space Agency to formulate
+specifications and standards for EO data so that it can be easily used by the AI community.
 
-<img src="../images/edgeai_pruning.png" width=95%>
+We gathered surveys from the community and then specified standards for EO data including what metadata should be present
+and how can we make it easier to ingest EO data into tools commonly used by AI practitioners. Best practices on how
+to train ML algorithms on EO data were also laid down.
+<center>
+<figure>
+    <img src="../images/high_level_summary.png" width=95%>
+    <figcaption> <center> Fig. 1: Different facets of EO data covered by AIREO specifications</center></figcaption>
+</figure>
+</center>
 
-I also collaborated with UCD Laboratory for [Advanced Manufacturing Simulation and Robotics](https://www.ucd.ie/lams/) to review edge AI techniques for collaborative robots.
-The review paper can be found [here](https://www.sciencedirect.com/science/article/pii/S2212827122003961).
+We also worked on the problem of image segmentation in satellite images. Figure below shows a satellite image on the left
+with segmentation map consisting of roads, water, buildings and forest.
+<center>
+<figure>
+    <img src="../images/sate_image.png" >
+    <figcaption> <center> Fig. 2: Satellite image on the left with segmentation map showing roads, water, buildings and forest
+    on the right.</center></figcaption>
+</figure>
+</center>
+
+A common problem with segmentation in satellite images is that often the ground truth is not completely labelled, e.g.,
+some roads might be left out of the labels in training data. Training a deep neural network becomes difficult as we do not
+have the complete ground truth, as such we need to design the loss function such that if we are confident enough in
+ some prediction we incorporate that in ground truth. To do that we use GANs (Generative Adversarial Networks) and borrow
+ ideas from two different studies, [UNet](https://arxiv.org/abs/1505.04597) and one by [Mittal et. al.](https://arxiv.org/abs/1908.05724) Additional terms to the loss function were added
+ and some modifications to the latter's pipeline were done. These modifications yielded better segmentation accuracy for some classes in the dataset.
+
+<center>
+<figure>
+    <img src="../images/gan_modifications.png" width=80%>
+    <figcaption> <center> Fig. 3: Modifications made to GAN: Added additional loss terms, removed a branch. Image source
+    from Mittal et. al. </center></figcaption>
+</figure>
+</center>
+
 
 -------------
 
 ### Important links
-#### Publications
 
+#### Link to European Space Agency's AIREO project
+[https://eo4society.esa.int/projects/aireo/](https://eo4society.esa.int/projects/aireo/)
 
-#### Videos
-1. [CeADAR Demonstrator: Edge AI](https://www.youtube.com/watch?v=MV_n0z0dCE4)
-1. [Hardware for Machine Learning](https://www.youtube.com/watch?v=wJgGkBhb9v4)
+#### Link to CeADAR's AI for Earth Observation demonstrator
+[https://ceadar.ie/blog/ai-for-earth-observation/](https://ceadar.ie/blog/ai-for-earth-observation/)
 
-#### Link to CeADAR's Edge AI demonstrator - [https://ceadar.ie/blog/edge-ai/](https://ceadar.ie/blog/edge-ai/)
+#### Publication
+1. Alastair McKinstry, Oisin Boydell, Quan Le, Inder Preet, Jennifer Hanafin, Manuel Fernandez, Adam Warde, Venkatesh Kannan,
+ and Patrick Griffiths, "AI-Ready Training Datasets for Earth Observation: Enabling FAIR data principles for EO training data".
+ EGU General Assembly, 2021, [link](https://meetingorganizer.copernicus.org/EGU21/EGU21-12384.html).

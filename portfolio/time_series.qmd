@@ -1,0 +1,54 @@
+---
+title: <b>Telecom Data Analytics</b>
+order: 4
+from: markdown+emoji
+image: ../images/sonalake/som.png
+
+---
+_____________
+
+### Summary
+Worked on telecom network data to identify anomalies and correlation between different KPIs to track the source of anomaly.
+
+### The story
+Working with [Sonalake](https://sonalake.com/) and their customer Vodafone Ireland we used state-of-the-art time-series analytics methods
+to solve various problems in telecom network management.
+
+1. The first one was trend analysis, where the trends in some key KPIs could help plan the telecom network operator like
+Vodafone figure out where to install additional capacity and how to plan future expansion. We used decomposition methods to better
+predict trends in various KPIs.
+<center>
+<figure>
+    <img src="../images/sonalake/decomposition.png" height=70%>
+    <figcaption> <center> Fig. 1: Decomposition of time series to better predict trends in KPIs</center></figcaption>
+</figure>
+</center>
+
+1. Anomaly detection is another area where telecom networks need some, as there are literally hundreds of KPIs
+a company like Vodafone monitors and automated ways to detect anomalies can improve quality of service. We used
+several methods to detect anomalies automatically in each of their KPIs and flag them in a timely manner.
+<center>
+<figure>
+    <img src="../images/sonalake/anomaly_det.png" height=60%>
+    <figcaption> <center> Fig. 2: Anomaly detection in a typical telecom KPI</center></figcaption>
+</figure>
+</center>
+
+1. Once the anomaly is identified, we also need to ascertain what services would it impact or what could have been
+the source of the anomaly. This is particularly difficult for telecom data as hundreds of KPIs are involved making their
+tracking manually intractable. Hence, we used self organizing maps to automatically find relationships between the KPIs
+that might suggest which ones can be a probable cause of failure or could be impacted by an anomaly.
+
+<center>
+<figure>
+    <img src="../images/sonalake/som.png">
+    <figcaption> <center> Fig. 3: Self organizing map for telecom KPIs</center></figcaption>
+</figure>
+</center>
+
+
+-------------
+
+#### Blog post from Sonalake's website summarizing this work
+
+[https://sonalake.com/latest/applying-analytics-and-data-science-in-telecoms-network-congestion-forecasting/](https://sonalake.com/latest/applying-analytics-and-data-science-in-telecoms-network-congestion-forecasting/)
