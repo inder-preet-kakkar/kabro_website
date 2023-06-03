@@ -1,5 +1,31 @@
 ---
-title: "Wind Energy Analysis"
+title: <b>Wind Energy Analysis</b>
 order: 5
 from: markdown+emoji
+image: ../images/brightwind_thumbnail.png
+
 ---
+_____________
+<img src="../images/brightwind_thumbnail.png" width=50%>
+
+### Summary
+
+
+### The story
+
+<img src="../images/edgeai_pruning.png" width=95%>
+
+I also collaborated with UCD Laboratory for [Advanced Manufacturing Simulation and Robotics](https://www.ucd.ie/lams/) to review edge AI techniques for collaborative robots.
+The review paper can be found [here](https://www.sciencedirect.com/science/article/pii/S2212827122003961).
+
+-------------
+
+### Important links
+#### Publications
+
+
+#### Videos
+1. [CeADAR Demonstrator: Edge AI](https://www.youtube.com/watch?v=MV_n0z0dCE4)
+1. [Hardware for Machine Learning](https://www.youtube.com/watch?v=wJgGkBhb9v4)
+
+#### Link to CeADAR's Edge AI demonstrator - [https://ceadar.ie/blog/edge-ai/](https://ceadar.ie/blog/edge-ai/)

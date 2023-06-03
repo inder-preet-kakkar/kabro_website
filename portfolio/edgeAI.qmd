@@ -2,30 +2,45 @@
 title: <b>Edge AI</b>
 order: 1
 from: markdown+emoji
-image: ../images/bmd340.png
+image: ../images/edgeai_thumbnail.png
 
 ---
 _____________
+
 ### Summary
-Designed novel neural network architecture, pruning and quantization techniques and embedded code for heartbeat classification and collaborative robotic platforms.
+Designing the whole edge AI pipeline -- edge based neural network architecture, pruning and quantization techniques and automatic embedded code generation.
 
 ### The story
-Spanning over an year, working at at [CeADAR](https://ceadar.ie/) - Ireland's Center for Applied AI, I worked on multiple areas of the Edge AI pipeline collaborating with multiple researchers.
-
-We created a technology demonstrator (or proof of concept), which you can check [here](https://ceadar.ie/blog/edge-ai/) where the whole edge AI pipeline starting from creating a deep neural network with low memory and computational footprint
+The work in Edge AI was done mainly under a technology demonstrator (or proof of concept) for [CeADAR](https://ceadar.ie/) - Ireland's Center for Applied AI, which you can check [here](https://ceadar.ie/blog/edge-ai/).
+The whole edge AI pipeline starting from creating a deep neural network with low memory and computational footprint
 to pruning and quantizing that network for deployment and finally automatically generating embedded code to deploy the network on an embedded device running ARM processor. The diagram below summarises the project.
-<img src="../images/edgeai_thumbnail.png">
+<figure>
+    <img src="../images/edgeai_thumbnail.png">
+    <figcaption> <center> Fig. 1: Overview of complete Edge AI pipeline </center></figcaption>
+</figure>
+Collaborating with [Dr. Deepu John](https://people.ucd.ie/deepu.john), the problem we tackled was anomaly detection in heartbeats and we proposed a novel architecture inspired from auto-encoders.
+ Adding additional neurons for feature augmentation to auto-encoders and chopping off the decoded layer we got a classifier with very low memory and computational footprint, making
+ it easier to deploy on edge. The diagram below shows the architecture.
 
-The problem we tackled was anomaly detection in heartbeats and we proposed a novel architecture inspired from auto-encoders with additional neurons for feature augmentation to keep the memory footprint
-of the neural network small. The diagram below shows the architecture.
-<img src="../images/edgeai_dnn_arch.png" width=95%>
+<figure>
+    <img src="../images/edgeai_dnn_arch.png" width=95%>
+    <figcaption> <center> Fig. 2: Architecture of deep neural network deployed at the edge </center></figcaption>
+</figure>
+
 
 We also created a novel pruning technique based on the ability of neurons to separate classes. This technique was patented and published and the diagram below shows the metric we
 proposed `class-separation score (css)`. For more details check the paper [here](https://ieeexplore.ieee.org/document/9982427/).
-<img src="../images/edgeai_pruning.png" width=95%>
 
-I also collaborated with UCD Laboratory for [Advanced Manufacturing Simulation and Robotics](https://www.ucd.ie/lams/) to review edge AI techniques for collaborative robots.
-The review paper can be found [here](https://www.sciencedirect.com/science/article/pii/S2212827122003961).
+
+<figure>
+    <img src="../images/edgeai_pruning.png" width=95%>
+    <figcaption> <center> Fig. 3: Class-separation-score, a metric we designed to prune neural networks</center></figcaption>
+</figure>
+On the side, a collaboration with UCD Laboratory for [Advanced Manufacturing Simulation and Robotics](https://www.ucd.ie/lams/) led to the paper,
+ "<b>Review and application of Edge AI solutions for mobile collaborative robotic platforms</b>", in Procedia CIRP, which can be found [here](https://www.sciencedirect.com/science/article/pii/S2212827122003961).
+
+Edge AI is still an exciting field with lots of new inventions coming frequently, like more specialized hardware and Neural Architecture Search (NAS) for the edge.
+I am eager to explore these new areas in edge AI.
 
 -------------
 
@@ -35,13 +50,15 @@ The review paper can be found [here](https://www.sciencedirect.com/science/artic
 1. Aswin K Ramasubramanian, Robins Mathew, Inder Preet, Nikolaos Papakostas, "Review and application of Edge AI solutions for mobile collaborative robotic platforms", Procedia CIRP, Volume 107, 2022, [link](https://www.sciencedirect.com/science/article/pii/S2212827122003961).
 
 #### Patent
+'Class Separation Aware Artificial Neural Network Pruning Method'
+
 International (PCT) Application No. PCT/EP2022/085998
 
-Title 'Class Separation Aware Artificial Neural Network Pruning Method'
 
 
 #### Videos
 1. [CeADAR Demonstrator: Edge AI](https://www.youtube.com/watch?v=MV_n0z0dCE4)
-1. [Hardware for Machine Learning](https://www.youtube.com/watch?v=wJgGkBhb9v4)
+1. [Hardware for Machine Learning, an overview](https://www.youtube.com/watch?v=wJgGkBhb9v4)
 
-#### Link to CeADAR's Edge AI demonstrator - [https://ceadar.ie/blog/edge-ai/](https://ceadar.ie/blog/edge-ai/)
+#### Link to CeADAR's Edge AI demonstrator
+[https://ceadar.ie/blog/edge-ai/](https://ceadar.ie/blog/edge-ai/)
