@@ -1,0 +1,79 @@
+---
+title: <b>Wind Energy Analytics</b>
+order: 5
+from: markdown+emoji
+image: ../images/brightwind/thumbnail.png
+
+---
+_____________
+
+### Summary
+Explored support vector machines for hind casting wind speed data for wind farms and created an open-source library for wind energy analysis.
+
+### The story
+What started as my master's thesis on wind resource assessment turned into first open source python library for wind
+energy analytics. We were looking at ways to predict the wind energy at a site using machine learning. It is necessary to
+ predict it accurately for the next twenty years before setting up a wind farm to evaluate financial viability of setting up a farm.
+ We ended up writing enough code to feel the need to
+open source it so other analysts can find it useful. It ended up being a popular project with many adopting the tool
+for their everyday wind energy assessment.
+
+The documentation of the library can be found [here](https://brightwind-dev.github.io/brightwind-docs/).
+
+Some cool things the library can do:
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+ - Advanced plots for wind analysts
+
+    <center>
+    <figure>
+        <img src="../images/brightwind/turbulence_plots.png" width=50%>
+        <figcaption> <center> Fig. 1: Wind rose for turbulence calculation.</center></figcaption>
+    </figure>
+    </center>
+
+  - Analyzing different types of wind distribution
+    <center>
+    <figure>
+        <img src="../images/brightwind/wind_distributions.png" width=70%>
+        <figcaption> <center> Fig. 3: Wind distribution analysis</center></figcaption>
+    </figure>
+    </center>
+:::
+
+::: {.column width="50%"}
+
+ - Shear calculation
+
+    <center>
+    <figure>
+        <img src="../images/brightwind/shear_calcualtion.png" width=50%>
+        <figcaption> <center> Fig. 2: Shear profile calculation</center></figcaption>
+    </figure>
+    </center>
+
+  - A suite of wind speed forecasting methods, including ones proposed in my thesis
+
+    <center>
+    <figure>
+        <img src="../images/brightwind/shear_calcualtion.png" width=50%>
+        <figcaption> <center> Fig. 4: Simple linear regression model for wind speed prediction</center></figcaption>
+    </figure>
+    </center>
+:::
+::::
+
+
+
+
+
+
+
+-------------
+
+#### Link to brightwind open-source python library
+[https://github.com/brightwind-dev/brightwind](https://github.com/brightwind-dev/brightwind)
