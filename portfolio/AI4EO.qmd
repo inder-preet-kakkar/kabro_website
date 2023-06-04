@@ -1,6 +1,6 @@
 ---
 title: <b>AI for Earth Observation</b>
-order: 2
+order: 4
 from: markdown+emoji
 image: ../images/sate_image.png
 

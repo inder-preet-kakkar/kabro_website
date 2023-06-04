@@ -1,6 +1,6 @@
 ---
 title: <b>Wind Energy Analytics</b>
-order: 5
+order: 1
 from: markdown+emoji
 image: ../images/brightwind/thumbnail.png
 

@@ -1,6 +1,6 @@
 ---
 title: <b>Telecom Data Analytics</b>
-order: 4
+order: 2
 from: markdown+emoji
 image: ../images/sonalake/som.png
 

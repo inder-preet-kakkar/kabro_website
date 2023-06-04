@@ -1,6 +1,6 @@
 ---
 title: <b>Edge AI</b>
-order: 1
+order: 5
 from: markdown+emoji
 image: ../images/edgeai_thumbnail.png
 

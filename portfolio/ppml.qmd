@@ -17,30 +17,42 @@ covering the different ways like anonymization, synthetic data generation and di
 to make data more private. We also created a short course on PPML accessible to CeADAR's members.
 Below we list the pedagogic videos we created during the project.
 
-
-1. Technical discussion with a few industry experts working on PPML
+- Technical discussion with a few industry experts working on PPML
 {{< video https://www.youtube.com/watch?v=HW_Q-YXzxvI aspect-ratio='21x9'>}}
 
-1. Overview of PPML
+:::: {.columns}
+
+::: {.column width="50%"}
+
+- Overview of PPML
+
 {{< video https://www.youtube.com/watch?v=L8DjLVlFyZ8 aspect-ratio='21x9'>}}
 
-1. Some use cases for PPML
+
+
+- Some use cases for PPML
 {{< video https://www.youtube.com/watch?v=BdZNhO1TMUg&list=PLdyP9rwOUXT2o8oobrMef7XUb_hKIBpbc aspect-ratio='21x9'>}}
 
-1. Does anonymization alone ensure privacy?
-{{< video https://www.youtube.com/watch?v=swF2Y1kIQdU&list=PLdyP9rwOUXT2o8oobrMef7XUb_hKIBpbc&index=3 aspect-ratio='21x9'>}}
-
-1. Synthetic Data Generation for privacy protection
+- Synthetic Data Generation for privacy protection
 {{< video  https://www.youtube.com/watch?v=aFKJvcpR3Sg&list=PLdyP9rwOUXT2o8oobrMef7XUb_hKIBpbc&index=4 aspect-ratio='21x9'>}}
 
-1. Using Synthetic Data Vault library
-{{< video https://www.youtube.com/watch?v=VD55NmNuhOw&list=PLdyP9rwOUXT2o8oobrMef7XUb_hKIBpbc&index=5 aspect-ratio='21x9'>}}
-
-1. Differential Privacy: Part 1
+- Differential Privacy: Part 1
 {{< video https://www.youtube.com/watch?v=MttVwhexFrQ&list=PLdyP9rwOUXT2o8oobrMef7XUb_hKIBpbc&index=6 aspect-ratio='21x9'>}}
 
-1. Differential Privacy: Part 2
+:::
+
+::: {.column width="50%"}
+
+
+- Does anonymization alone ensure privacy?
+{{< video https://www.youtube.com/watch?v=swF2Y1kIQdU&list=PLdyP9rwOUXT2o8oobrMef7XUb_hKIBpbc&index=3 aspect-ratio='21x9'>}}
+
+- Using Synthetic Data Vault library
+{{< video https://www.youtube.com/watch?v=VD55NmNuhOw&list=PLdyP9rwOUXT2o8oobrMef7XUb_hKIBpbc&index=5 aspect-ratio='21x9'>}}
+
+- Differential Privacy: Part 2
 {{< video https://www.youtube.com/watch?v=EtcuI-2eGpo&list=PLdyP9rwOUXT2o8oobrMef7XUb_hKIBpbc&index=7 aspect-ratio='21x9'>}}
 
-
+:::
+::::
 -------------

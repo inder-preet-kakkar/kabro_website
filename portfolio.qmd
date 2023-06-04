@@ -6,6 +6,6 @@ listing:
   grid-columns: 2
   grid-item-align: center
   sort:
-    - "order asc"
+    - "order dsc"
 
 ---
