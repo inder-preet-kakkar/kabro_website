@@ -135,7 +135,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="the-story" class="level3">
 <h3 class="anchored" data-anchor-id="the-story">The story</h3>
-The work in Edge AI was done mainly under a technology demonstrator (or proof of concept) for <a href="https://ceadar.ie/">CeADAR</a> - Ireland’s Center for Applied AI, which you can check <a href="https://ceadar.ie/blog/edge-ai/">here</a>. The whole edge AI pipeline starting from creating a deep neural network with low memory and computational footprint to pruning and quantizing that network for deployment and finally automatically generating embedded code to deploy the network on an embedded device running ARM processor. The diagram below summarises the project.
+<p>The work in Edge AI was done mainly under a technology demonstrator (or proof of concept) for <a href="https://ceadar.ie/">CeADAR</a> - Ireland’s Center for Applied AI, which you can check <a href="https://ceadar.ie/blog/edge-ai/">here</a>. The whole edge AI pipeline starting from creating a deep neural network with low memory and computational footprint to pruning and quantizing that network for deployment and finally automatically generating embedded code to deploy the network on an embedded device running ARM processor. The diagram below summarises the project.</p>
+<center>
 <figure class="figure">
 <img src="../images/edgeai_thumbnail.png" class="figure-img">
 <figcaption class="figure-caption">
@@ -144,7 +145,9 @@ Fig. 1: Overview of complete Edge AI pipeline
 </center>
 </figcaption>
 </figure>
+</center>
 <p>Collaborating with <a href="https://people.ucd.ie/deepu.john">Dr.&nbsp;Deepu John</a>, the problem we tackled was anomaly detection in heartbeats and we proposed a novel architecture inspired from auto-encoders. Adding additional neurons for feature augmentation to auto-encoders and chopping off the decoded layer we got a classifier with very low memory and computational footprint, making it easier to deploy on edge. The diagram below shows the architecture.</p>
+<center>
 <figure class="figure">
 <img src="../images/edgeai_dnn_arch.png" width="95%" class="figure-img">
 <figcaption class="figure-caption">
@@ -153,7 +156,9 @@ Fig. 2: Architecture of deep neural network deployed at the edge
 </center>
 </figcaption>
 </figure>
+</center>
 <p>We also created a novel pruning technique based on the ability of neurons to separate classes. This technique was patented and published and the diagram below shows the metric we proposed <code>class-separation score (css)</code>. For more details check the paper <a href="https://ieeexplore.ieee.org/document/9982427/">here</a>.</p>
+<center>
 <figure class="figure">
 <img src="../images/edgeai_pruning.png" width="95%" class="figure-img">
 <figcaption class="figure-caption">
@@ -162,6 +167,7 @@ Fig. 3: Class-separation-score, a metric we designed to prune neural networks
 </center>
 </figcaption>
 </figure>
+</center>
 <p>On the side, a collaboration with UCD Laboratory for <a href="https://www.ucd.ie/lams/">Advanced Manufacturing Simulation and Robotics</a> led to the paper, “<b>Review and application of Edge AI solutions for mobile collaborative robotic platforms</b>”, in Procedia CIRP, which can be found <a href="https://www.sciencedirect.com/science/article/pii/S2212827122003961">here</a>.</p>
 <p>Edge AI is still an exciting field with lots of new inventions coming frequently, like more specialized hardware and Neural Architecture Search (NAS) for the edge. I am eager to explore these new areas in edge AI.</p>
 <hr>

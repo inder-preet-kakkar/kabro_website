@@ -14,28 +14,35 @@ Designing the whole edge AI pipeline -- edge based neural network architecture, 
 The work in Edge AI was done mainly under a technology demonstrator (or proof of concept) for [CeADAR](https://ceadar.ie/) - Ireland's Center for Applied AI, which you can check [here](https://ceadar.ie/blog/edge-ai/).
 The whole edge AI pipeline starting from creating a deep neural network with low memory and computational footprint
 to pruning and quantizing that network for deployment and finally automatically generating embedded code to deploy the network on an embedded device running ARM processor. The diagram below summarises the project.
+
+<center>
 <figure>
     <img src="../images/edgeai_thumbnail.png">
     <figcaption> <center> Fig. 1: Overview of complete Edge AI pipeline </center></figcaption>
 </figure>
+</center>
+
 Collaborating with [Dr. Deepu John](https://people.ucd.ie/deepu.john), the problem we tackled was anomaly detection in heartbeats and we proposed a novel architecture inspired from auto-encoders.
  Adding additional neurons for feature augmentation to auto-encoders and chopping off the decoded layer we got a classifier with very low memory and computational footprint, making
  it easier to deploy on edge. The diagram below shows the architecture.
 
+<center>
 <figure>
     <img src="../images/edgeai_dnn_arch.png" width=95%>
     <figcaption> <center> Fig. 2: Architecture of deep neural network deployed at the edge </center></figcaption>
 </figure>
-
+</center>
 
 We also created a novel pruning technique based on the ability of neurons to separate classes. This technique was patented and published and the diagram below shows the metric we
 proposed `class-separation score (css)`. For more details check the paper [here](https://ieeexplore.ieee.org/document/9982427/).
 
-
+<center>
 <figure>
     <img src="../images/edgeai_pruning.png" width=95%>
     <figcaption> <center> Fig. 3: Class-separation-score, a metric we designed to prune neural networks</center></figcaption>
 </figure>
+</center>
+
 On the side, a collaboration with UCD Laboratory for [Advanced Manufacturing Simulation and Robotics](https://www.ucd.ie/lams/) led to the paper,
  "<b>Review and application of Edge AI solutions for mobile collaborative robotic platforms</b>", in Procedia CIRP, which can be found [here](https://www.sciencedirect.com/science/article/pii/S2212827122003961).
 
