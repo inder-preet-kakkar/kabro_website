@@ -22,7 +22,7 @@ The same goes for the name KabroAI, which comes from my family's business of sel
 ### Get in touch
 If you're interested in learning more about Edge AI or collaborating on a project, please don't hesitate to get in touch. I'm always excited to connect with like-minded individuals and organizations who share my passion for bringing intelligent systems to the edge of the network.
 
-**Contact**: singhinderpreet1995[at]gmail[dot]com
+**Contact**: contact[at]kabroai[dot]ie
 
 
 ::: {.column-page-inset .text-center}
