@@ -28,7 +28,7 @@ We also worked on the problem of image segmentation in satellite images. Figure 
 with segmentation map consisting of roads, water, buildings and forest.
 <center>
 <figure>
-    <img src="../images/sate_image.png" >
+    <img src="../images/sate_image.png" width=99%>
     <figcaption> <center> Fig. 2: Satellite image on the left with segmentation map showing roads, water, buildings and forest
     on the right.</center></figcaption>
 </figure>

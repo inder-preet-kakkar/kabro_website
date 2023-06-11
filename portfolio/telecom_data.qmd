@@ -19,7 +19,7 @@ Vodafone figure out where to install additional capacity and how to plan future 
 predict trends in various KPIs.
 <center>
 <figure>
-    <img src="../images/sonalake/decomposition.png" height=70%>
+    <img src="../images/sonalake/decomposition.png" width=100%>
     <figcaption> <center> Fig. 1: Decomposition of time series to better predict trends in KPIs</center></figcaption>
 </figure>
 </center>
@@ -29,7 +29,7 @@ a company like Vodafone monitors and automated ways to detect anomalies can impr
 several methods to detect anomalies automatically in each of their KPIs and flag them in a timely manner.
 <center>
 <figure>
-    <img src="../images/sonalake/anomaly_det.png" height=60%>
+    <img src="../images/sonalake/anomaly_det.png" width=100%>
     <figcaption> <center> Fig. 2: Anomaly detection in a typical telecom KPI</center></figcaption>
 </figure>
 </center>
@@ -41,7 +41,7 @@ that might suggest which ones can be a probable cause of failure or could be imp
 
 <center>
 <figure>
-    <img src="../images/sonalake/som.png">
+    <img src="../images/sonalake/som.png" width=99%>
     <figcaption> <center> Fig. 3: Self organizing map for telecom KPIs</center></figcaption>
 </figure>
 </center>
