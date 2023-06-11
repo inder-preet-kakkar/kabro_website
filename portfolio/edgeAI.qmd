@@ -17,7 +17,7 @@ to pruning and quantizing that network for deployment and finally automatically 
 
 <center>
 <figure>
-    <img src="../images/edgeai_thumbnail.png">
+    <img src="../images/edgeai_thumbnail.png" width=99%>
     <figcaption> <center> Fig. 1: Overview of complete Edge AI pipeline </center></figcaption>
 </figure>
 </center>
