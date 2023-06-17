@@ -1,5 +1,5 @@
 ---
-title: <b>Edge AI</b>
+title: <b>Harware software codesign for Deep Learning</b>
 order: 5
 from: markdown+emoji
 image: ../images/edgeai_thumbnail.png
@@ -8,11 +8,11 @@ image: ../images/edgeai_thumbnail.png
 _____________
 
 ### Summary
-Designing the whole edge AI pipeline -- edge based neural network architecture, pruning and quantization techniques and automatic embedded code generation.
+Designing the whole pipeline -- edge based neural network architecture, pruning and quantization techniques and automatic embedded code generation.
 
 ### The story
-The work in Edge AI was done mainly under a technology demonstrator (or proof of concept) for [CeADAR](https://ceadar.ie/) - Ireland's Center for Applied AI, which can be checked [here](https://ceadar.ie/blog/edge-ai/).
-The whole edge AI pipeline starting from creating a deep neural network with low memory and computational footprint
+The work in this project was done mainly under a technology demonstrator (or proof of concept) for [CeADAR](https://ceadar.ie/) - Ireland's Center for Applied AI, which can be checked [here](https://ceadar.ie/blog/edge-ai/).
+The whole pipeline starting from creating a deep neural network with low memory and computational footprint
 to pruning and quantizing that network for deployment and finally automatically generating embedded code to deploy the network on an embedded device running ARM processor was created. The diagram below shows this whole pipeline.
 
 <center>
@@ -22,7 +22,7 @@ to pruning and quantizing that network for deployment and finally automatically 
 </figure>
 </center>
 
-Collaborating with [Dr. Deepu John](https://people.ucd.ie/deepu.john), the problem we tackled was anomaly detection in heartbeats and we proposed a novel architecture inspired from auto-encoders.
+Collaborating with [Dr. Deepu John](https://people.ucd.ie/deepu.john), the problem we tackled was anomaly detection in heartbeats and proposed a novel architecture inspired from auto-encoders.
  Adding additional neurons for feature augmentation to auto-encoders and chopping off the decoded layer we got a classifier with very low memory and computational footprint, making
  it easier to deploy on edge. The diagram below shows the architecture.
 
@@ -43,11 +43,10 @@ proposed `class-separation score (css)`. For more details check the paper [here]
 </figure>
 </center>
 
-On the side, a collaboration with UCD Laboratory for [Advanced Manufacturing Simulation and Robotics](https://www.ucd.ie/lams/) led to the paper,
+Also, a collaboration with UCD Laboratory for [Advanced Manufacturing Simulation and Robotics](https://www.ucd.ie/lams/) led to the paper,
  "<b>Review and application of Edge AI solutions for mobile collaborative robotic platforms</b>", in Procedia CIRP, which can be found [here](https://www.sciencedirect.com/science/article/pii/S2212827122003961).
 
-Edge AI is still an exciting field with lots of new inventions coming frequently, like more specialized hardware and Neural Architecture Search (NAS) for the edge.
-I am eager to explore these new areas in edge AI.
+This is still an exciting field with lots of new inventions coming frequently, like more specialized hardware and Neural Architecture Search (NAS) for the edge.
 
 -------------
 

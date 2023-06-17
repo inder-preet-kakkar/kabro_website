@@ -15,7 +15,7 @@ industry and AI. As such, we worked on [AIREO](https://eo4society.esa.int/projec
 specifications and standards for EO data so that it can be easily used by the AI community.
 
 We gathered surveys from the community and then specified standards for EO data including what metadata should be present
-and how can we make it easier to ingest EO data into tools commonly used by AI practitioners. Best practices on how
+and how we can make it easier to ingest EO data into tools commonly used by AI practitioners. Best practices on how
 to train ML algorithms on EO data were also laid down.
 <center>
 <figure>
@@ -39,7 +39,7 @@ some roads might be left out of the labels in training data. Training a deep neu
 have the complete ground truth, as such we need to design the loss function such that if we are confident enough in
  some prediction we incorporate that in ground truth. To do that we use GANs (Generative Adversarial Networks) and borrow
  ideas from two different studies, [UNet](https://arxiv.org/abs/1505.04597) and one by [Mittal et. al.](https://arxiv.org/abs/1908.05724) Additional terms to the loss function were added
- and some modifications to the latter's pipeline were done. These modifications yielded better segmentation accuracy for some classes in the dataset.
+ and some modifications to the latter's pipeline were made. These modifications yielded better segmentation accuracy for some classes in the dataset.
 
 <center>
 <figure>

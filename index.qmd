@@ -7,10 +7,10 @@ about:
   image: images/about_headshot.jpg
 ---
 
-Welcome to my website, KabroAI! **My name is Inder Preet and I'm a data scientist interested in algorithms and models specializing in Edge AI**, a cutting-edge technology that brings machine learning and artificial intelligence to devices at the edge of the network.
+Welcome to my website, KabroAI! **My name is Inder Preet and I'm a data scientist interested in algorithms and models specializing in hardware software codesign for deep learning**, a cutting-edge technology that brings machine learning and artificial intelligence to devices at the edge of the network.
 It involves developing intelligent systems that run on devices with limited computing resources, such as smartphones, robots, wearables, and IoT sensors.
 
-In addition to my work in Edge AI, I have worked on a lot of other things, like, time-series analysis, AI for Earth Observation, Privacy Preserving ML and most recently optimization for energy management in buildings.
+Additionally, I have worked on a lot of other things, like, time-series analysis, AI for Earth Observation, Privacy Preserving ML and most recently optimization for energy management in buildings.
 Checkout my [portfolio](portfolio.qmd) for more information on all these.
 <br>
 
@@ -20,7 +20,7 @@ two themes across the [portfolio](portfolio.qmd) and [blog](blog.qmd).
 The same goes for the name KabroAI, which comes from my family's business of selling motor parts. But won't deny it is also a catchy name :wink:.
 -->
 ### Get in touch
-If you're interested in learning more about Edge AI or collaborating on a project, please don't hesitate to get in touch. I'm always excited to connect with like-minded individuals and organizations who share my passion for bringing intelligent systems to the edge of the network.
+If you're interested in learning more about these projects, please don't hesitate to get in touch. I'm always excited to connect with like-minded individuals and organizations who share my passion for bringing intelligent systems to the edge of the network.
 
 **Contact**: contact[at]kabroai[dot]ie
 
