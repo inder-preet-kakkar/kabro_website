@@ -11,9 +11,9 @@ _____________
 Designing the whole edge AI pipeline -- edge based neural network architecture, pruning and quantization techniques and automatic embedded code generation.
 
 ### The story
-The work in Edge AI was done mainly under a technology demonstrator (or proof of concept) for [CeADAR](https://ceadar.ie/) - Ireland's Center for Applied AI, which you can check [here](https://ceadar.ie/blog/edge-ai/).
+The work in Edge AI was done mainly under a technology demonstrator (or proof of concept) for [CeADAR](https://ceadar.ie/) - Ireland's Center for Applied AI, which can be checked [here](https://ceadar.ie/blog/edge-ai/).
 The whole edge AI pipeline starting from creating a deep neural network with low memory and computational footprint
-to pruning and quantizing that network for deployment and finally automatically generating embedded code to deploy the network on an embedded device running ARM processor. The diagram below summarises the project.
+to pruning and quantizing that network for deployment and finally automatically generating embedded code to deploy the network on an embedded device running ARM processor was created. The diagram below shows this whole pipeline.
 
 <center>
 <figure>
