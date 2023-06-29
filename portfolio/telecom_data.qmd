@@ -11,11 +11,11 @@ _____________
 Worked on telecom network data to identify anomalies and correlation between different KPIs to track the source of anomaly.
 
 ### The story
-Working with [Sonalake](https://sonalake.com/) and their customer Vodafone Ireland we used state-of-the-art time-series analytics methods
+Working with [Sonalake](https://sonalake.com/) state-of-the-art time-series analytics methods were used
 to solve various problems in telecom network management.
 
-1. The first one was trend analysis, where the trends in some key KPIs could help plan the telecom network operator like
-Vodafone figure out where to install additional capacity and how to plan future expansion. We used decomposition methods to better
+1. The first one was trend analysis, where the trends in some key KPIs could help plan a telecom network operator figure
+ out where to install additional capacity and how to plan future expansion. We used decomposition methods to better
 predict trends in various KPIs.
 <center>
 <figure>
@@ -25,7 +25,8 @@ predict trends in various KPIs.
 </center>
 
 1. Anomaly detection is another area where telecom networks need some automation, as there are literally hundreds of KPIs
-a company like Vodafone monitors and manually looking for anomalies is not feasible. Automated ways to detect anomalies can improve quality of service. We used
+which they monitor and manually looking for anomalies is not feasible. Automated ways to detect anomalies can improve
+quality of service. We used
 several methods to detect anomalies automatically in each of their KPIs and flag them in a timely manner.
 <center>
 <figure>
