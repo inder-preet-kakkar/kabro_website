@@ -3,8 +3,8 @@ project:
   output-dir: docs
 
 website:
-  title: "KabroAI"
-  site-url: https://www.kabroai.ie
+  title: "Inder Preet"
+  site-url: https://www.inderpreet.ie
   navbar:
     left:
       - href: index.qmd
