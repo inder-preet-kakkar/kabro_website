@@ -65,6 +65,7 @@ International (PCT) Application No. PCT/EP2022/085998
 #### Videos
 1. [CeADAR Demonstrator: Edge AI](https://www.youtube.com/watch?v=MV_n0z0dCE4)
 1. [Hardware for Machine Learning, an overview](https://www.youtube.com/watch?v=wJgGkBhb9v4)
+1. [Pruning and Quantization for DNNs - PyCon Ireland](https://youtu.be/RDPT1DpqXSE)
 
 #### Link to CeADAR's Edge AI demonstrator
 [https://ceadar.ie/blog/edge-ai/](https://ceadar.ie/blog/edge-ai/)
