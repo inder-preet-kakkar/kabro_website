@@ -70,9 +70,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -168,14 +168,20 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1682379009554" data-listing-reading-time-sort="0">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1690625735147" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="./blog/post1.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
 <a href="./blog/post1.html">
-<div class="listing-description">
+<h3 class="no-anchor listing-title">
+<b>Test article</b>
+</h3>
+<div class="listing-subtitle">
 
+</div>
+<div class="listing-description">
+Blah blah blah
 </div>
 </a>
 </div>
@@ -189,6 +195,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="body">
 <a href="./blog/post2.html">
+<h3 class="no-anchor listing-title">
+</h3>
+<div class="listing-subtitle">
+
+</div>
 <div class="listing-description">
 
 </div>
