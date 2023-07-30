@@ -7,4 +7,5 @@ freeze: false
 title-block-banner: true
 
 comments:
-  hypothesis: true
+  giscus:
+    repo: inder-preet-kakkar/website_comments
