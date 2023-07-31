@@ -50,7 +50,7 @@ And here is the problem, hypothesis testing is not very useful for machine learn
 An alternative and in all ways a better way to interview, if you are interviewing an experienced candidate, would be to ask the candidate about their previous projects, delve deeper into how they chose models, what metrics did they use, did they design new algorithms, etc. And that was precisely my  job interview at the company I am currently working and many others for which I interviewed.
 
 
-> To weave these the threads together here are the two key takeaways if you are managing or hiring data scientists ---
+> To weave these threads together here are the two key takeaways if you are managing or hiring data scientists ---
 >
 > - Data science roles are already very generic, let’s not try to make it even more generic  by expecting a data scientist to be a software engineer.
 > - When hiring, value domain expertise or at least the ability of the person being hired to pick up the domain knowledge.
