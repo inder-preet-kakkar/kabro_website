@@ -2,7 +2,7 @@
 title: <b>Hiring and Managing Data Scientists</b>
 order: 1
 from: markdown+emoji
-date: 1 August, 2023
+date: 31 July, 2023
 Words: ~1500
 ---
 
