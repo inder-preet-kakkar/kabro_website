@@ -70,9 +70,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-Words',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -161,55 +161,64 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Working on it, stay tuned!</p>
+<p>Blogs here a mix of some technical and non-technical topics, mostly things that I think about. They do not have a set pattern and not all of them would be very thorough. But enjoy anyway ;) !</p>
 
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1690721757622" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./blog/post1.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+         <option value="listing-title-sort" data-direction="asc">
+          Title
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
 </div>
-<div class="body">
-<a href="./blog/post1.html">
-<h3 class="no-anchor listing-title">
-<b>Test article</b>
-</h3>
-<div class="listing-subtitle">
 
-</div>
-<div class="listing-description">
-Blah blah blah
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./blog/post1.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1682379021548" data-listing-reading-time-sort="0">
-<div class="thumbnail">
-<p><a href="./blog/post2.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./blog/post2.html">
-<h3 class="no-anchor listing-title">
-</h3>
-<div class="listing-subtitle">
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+<th>
+Words
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-listing-date-sort="1690844400000" data-listing-file-modified-sort="1690836926970" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-title-sort="<b>Hiring and Managing Data Scientists</b>" data-listing-filename-sort="post1.qmd">
+<td>
+<span class="listing-date">Aug 1, 2023</span>
+</td>
+<td>
+<a href="./blog/post1.html" class="title listing-title"><b>Hiring and Managing Data Scientists</b></a>
+</td>
+<td>
+<span class="listing-Words">~1500</span>
+</td>
+</tr>
+</tbody>
 
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./blog/post2.html"> </a>
-</div>
-</div>
-</div>
+</table>
 <div class="listing-no-matching d-none">
 No matching items
 </div>

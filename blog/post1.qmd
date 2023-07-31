@@ -1,7 +1,59 @@
 ---
-title: <b>Test article</b>
-order: 4
+title: <b>Hiring and Managing Data Scientists</b>
+order: 1
 from: markdown+emoji
+date: 1 August, 2023
+Words: ~1500
 ---
 
-Blah blah blah
+> *This short post describes some learnings from my experience in Data Science and might give some useful tips for hiring
+and managing data scientists.*
+
+About a year ago, I was looking for new a data science role. I had been working as a data scientist in a R&D centre of a university for more than three years and it was time for me to venture into the corporate world. And as with the usual job search I interviewed at  a bunch of companies, and most of the interviews went well. Though I made some mistakes in a couple, but one of the interviews with a very well known company went horribly, and it discouraged me a lot as these were the early days of job hunting.
+
+Doubt about the usefulness of the skills I had learnt working at the university engulfed me and it felt I had to reskill a lot to move into the corporate. But as the overwhelming riptides of that hunt have ceded and having had the time to see for myself over the past year in my current role in the corporate, the intricacies of the data science role in corporations, I have realised that the problem was something else and goes much deeper. And it is about how companies see data scientists.
+
+> ### In the absence of well defined responsibilities, many companies over expect the skills of a data scientist.
+
+If you are managing a team of data scientists, you would expect them to create models/algorithms with reasonable performance guarantees that can help your business. Or if it is about getting insights from data, some reliable, interpretable information in the form of reports, graphs, etc. But companies have gone a step ahead, sorry my bad, many steps ahead.
+
+Many companies, if you are a data scientist, expect you to not only create state-of-the-art models/algorithms but also expect an efficient and well tested code to implement it. It doesn’t end here, it also expects you to handle the data pipelines (which by the way is a data engineer’s job), databases and also make sure that you use the latest tools for deployment, like Docker and also configure those CI/CD pipelines. Woah! The list gets even bigger when data science projects are managed with Scrum.
+
+Well, I am not advocating that a data scientist should write poor code or be completely unaware of model deployment. But at the same time there is a difference between a data scientist, a data engineer and a software engineer. You need to ask yourself:
+
+> ### Would you ask your accountant to be a lawyer just because they know tax laws?
+
+Let me elaborate, coding is one of the main tools used by  data scientists, as such they pick a lot of skills that traditional coders pick like writing clean code, testing it, software design, etc. But at the same time you cannot expect your data scientist to be as proficient in these as a coder. The trend most data science teams are following is making the data scientist do all the jobs that otherwise would fit a software engineer.
+
+If you want your data science team to tackle the whole pipeline of creating a ‘deployable’ solution, then make sure you equip them with the necessary skill set either by training them or by getting expert software developers and data engineers helping your team. Though I am not personally in favour of the former, i.e., training data scientists to do everything, because there is always a time constraint involved, you always have a fixed time to do everything. And if you offload deployment to your data scientists you end up spending time that would have gone to model development to model deployment, the result being an inferior deployed model.
+
+There is another problem with expecting your data scientists to excel at these skills–
+
+> ### It is just too damn hard for one person to master so many technical skills.
+
+You already knew it, but somehow we forget this when we are managing people and have a tendency to make the most out of what we spend on our team.To circle back to that horrible interview, I was being asked about software design patterns, testing frameworks, other coding related and not so much about Machine Learning models. I felt being interviewed for a software engineering job and expressed my concerns to the interviewers. What came after is the second problem with the data science role.
+
+
+The industry still seems to be experimenting with the ideal data science candidate. Data Scientist cadre comes from Statistics, Biology, Physics, Mathematics, Computer Science, and some other eccentric degrees. Masters and bachelors courses in data science are new and will take time to gain traction. As such, even when talking about core data science skills the corpus to go through is extremely large and varied. And no one would disagree that once a data scientist starts working on a project, the knowledge of that domain is paramount to the success of that project.
+
+> ### Domain specific data scientists might be the way ahead.
+
+Hence, some companies, have rather smartly, started specialising the data science roles. You will see a ‘marketing data scientist’ role advertised in Dublin quite often. Which I feel is a good start, rather than hiring a data scientist with financial services experience to do marketing related projects. And this is the trend I see ahead and some of you might also find it useful when hiring data scientists to look for domain specific data scientists, of course if it suits you. But many of you will be companies which are just starting off their data science journey and there won’t be many data scientists with that domain knowledge. In that case, use your sane judgement and probably do not hire someone way off, like, a data scientist working for a bank on mainly tabular data may not be the best if you want to do computer vision tasks.
+
+
+This simple sense is not very commonly seen. So, let us delve deeper into it. There are literally thousands of research papers out there with models/algorithms, and some of these have been nicely coded into Python libraries like Sklearn, numpy, pytorch, keras, tensorflow, etc. Contrary to what many think, data science is not about using these off the shelf Python libraries and solve the problem, it still involves a lot of research and innovation, a data scientist has to dwell into the problem make amendments to these to suit their needs and that there is the applied research bit which is still very prevalent in data science problems.
+
+To give an example, coming back to that interview, we were talking about hypothesis testing, obviously because the interviewer had a PhD in statistics. Honestly, I was a bit rusty about it and he asked how do you compare your machine learning models if you don’t know about a so and so test. There was an awkward pause because that sounded new, even to the other interviewer. But I went ahead and explained about different metrics that can be used like f1-score, etc. But he soon came back to hypothesis testing.
+
+And here is the problem, hypothesis testing is not very useful for machine learning models because it is quite expensive to compute. For most tests you would want to run your models/algorithms hundreds of times to get a test statistic which has a high enough power. Hence, you seldom see hypothesis testing being used in machine learning literature to compare models. During the two interviews which I had with that company, both of them at least an hour long, that was the only question related to models/algorithms that I was asked.  As I said earlier the recommended corpus is too large for data science and this situation was just a symptom of that problem.
+
+An alternative and in all ways a better way to interview, if you are interviewing an experienced candidate, would be to ask the candidate about their previous projects, delve deeper into how they chose models, what metrics did they use, did they design new algorithms, etc. And that was precisely my  job interview at the company I am currently working and many others for which I interviewed.
+
+
+> To weave these the threads together here are the two key takeaways if you are managing or hiring data scientists ---
+>
+> - Data science roles are already very generic, let’s not try to make it even more generic  by expecting a data scientist to be a software engineer.
+> - When hiring, value domain expertise or at least the ability of the person being hired to pick up the domain knowledge.
+
+Hope that gives you some perspective and if you have any suggestions or comments feel free to mention them in the comments below.
+

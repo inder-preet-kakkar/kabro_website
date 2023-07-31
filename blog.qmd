@@ -4,7 +4,11 @@ listing:
   contents: blog
   sort:
     - "order dsc"
+  type: table
+  fields: [date, title, Words]
 ---
 
-Working on it, stay tuned!
+Blogs here a mix of some technical and non-technical topics, mostly things that I think about. They do not have
+a set pattern and not all of them would be very thorough. But enjoy anyway ;) !
+
 
