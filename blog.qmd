@@ -8,7 +8,7 @@ listing:
   fields: [date, title, Words]
 ---
 
-Blogs here a mix of some technical and non-technical topics, mostly things that I think about. They do not have
+Blog posts here  are a mix of technical and non-technical topics, mostly things that I think about. They do not have
 a set pattern and not all of them would be very thorough. But enjoy anyway ;) !
 
 
