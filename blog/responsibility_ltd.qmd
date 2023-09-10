@@ -1,0 +1,57 @@
+---
+title: <b>Responsibility Ltd.</b>
+order: 1
+from: markdown+emoji
+date: 10 September, 2023
+Words: ~1200
+---
+
+> *Observe what you say for about two or three days, and think if you really mean what you say or is it only a reverberation of things you have read, heard or seen.*
+
+And even if it is the latter, have you critically thought about it, about all its facets, nuances, repercussions, etc. Could you be held responsible for what you say? Because somehow, the responsibility of saying what is right has drastically diminished. And especially when we say or write things on social media. The ethical onus of being right is no longer felt by most of us.
+
+But the problem has graver consequences than you think, the homogeneity of untested ideas, of wants and aspirations. Let me elaborate on each of these.
+
+Hype around generative AI, have we thought well about it? Hype about data science, how many companies are actually finding data science useful. Most of them are investing in the promise of insights from data. But are these insights valuable for all kinds of businesses? A more specific example, how much of machine learning which is being tried out in the medical domain will see the light of day when they have to go through all the regulations that the tools in the medical domain are usually subjected to. Even if they start it, it will take a decade to go through them.
+
+Many tech CEOs/CTOs/C-suite which are responsible for taking key decisions are not generally experts in AI but they are experts in running the business. As such, and rightly so, many of them rely on AI experts. But most strategies drown in the sea of self-proclaimed AI experts. Difference between hearsay and reliable references is very hard to tell. If you watch interviews of someone from the C-suite, you can clearly spot what terribly incorrect ideas of certain technologies make their way into the decision making process.
+
+There is a phrase, **‘shite talker’**, which I have gotten to know recently and honestly, I am beginning to be fond of. Because it encapsulates the pride and confidence one feels, when one is asked to present in a conference, to give a talk, or write something for publishing online or even when asked for advice. Somehow we get so elated when we get these opportunities that we end up blabbering ideas, exuding confidence, in things we haven’t given much thought about. That is why I think we should always take someone speaking at a podium or a ‘fireside chat’ with a pinch of salt. Very few of us have been able to overcome this demon of herofying ourselves when we get these chances to express ourselves to a broader audience, who in our mind at least, hold us in high regard.
+
+*Let me share an anecdote here.*
+
+ I was once attending a talk of a renowned professor in Dublin, he was from Stanford and quite a few big names from Dublin’s AI community had gathered to hear him. He was presenting his research and discussing the $r^2$ metric for his models. I had read in a blog which had cited a paper (which made it very convincing to me) that $r^2$ is not a good metric for non-linear models, so I asked him that question. And the room went awfully quiet for a second and he replied, astonished by the stupidity of the question asked, that it was just not true. My cover had been blown, and the rookie me had been exposed and I am sure some of you can relate to the humiliation of asking a stupid question in front of your peers.  That evening I tugged my tail between my legs and went home.
+
+After reaching home I went through the blog again and also through the paper it cited. The paper referenced yet another paper and that paper cited another one. As such, going through a string of five papers over the week, I finally found the ground truth (pun intended 😉). That paper listed different formulae for calculating $r^2$ and explained the shortcomings of each of them. But it also offered a solution, a formula that doesn’t suffer from that problem. Somehow all those who based their work on this paper missed the key point of the paper and some of them would definitely have been peer reviewed.
+
+**This gives me serious trust issues**, even more, some of you might be aware of it too, when Nobel worthy research is being discredited because of allegations against the researchers for concocting experimental results. Given these trust issues whenever I am looking for technical information on the web I usually look only at .edu sites from reputed institutes, but I am not convinced that the strategy would hold for long.
+
+On a related note, what truly disappoints me is the news, it seems like every news channel has a set template which they try to fit to every story rather than tackling the nuances of things. These templates are – rags to riches story, the rich or powerful not caring about the poor, scientific breakthroughs accompanied by women in science, etc. and you see these popping everywhere, news losing its very meaning, rude debates, personal biases of news readers and hosts, etc.
+
+Somehow I think that there is a part of us that trusts the information in books, in the news, on the internet, on blogs more than it deserves.
+
+
+
+*On the homogeneity of wants and aspirations…*
+
+We live in a consumerist world where we have somehow ended up producing much more we can consume. Corporations can pay exuberant salaries to MBAs, marketing and sales departments just to get rid of this surplus. Instead of writing more of these hackneyed facts here are some of my thoughts with no particular structure.
+
+> When  Taylor Swift sang Marry me, Juliet, you'll never have to be alone.
+> Does she really mean it? How many married couples do actually feel they are never alone.
+
+> Do you need the latest iphone and carry that heavy phone in your pocket?
+> You buy more shite, which in turn propels more people even further to want those things.
+
+> How much of your wants and likings are your own and how much have you been conditioned to want?
+> Difficult, might take you a lifetime to figure out.
+
+
+
+
+
+
+I have no clear remedy for the issue of taking limited responsibility that I have described here, but an example of a solution.
+
+One of my professors back when I was doing my undergrad, Dr. Bikram Phookun is one person that comes to my mind when I imagine someone who has really thought through and internalized what one is saying. Not only were his lectures a delight but otherwise as well he is quite an interesting person to talk to because, it seems to me, he has thought very deeply even about things we take for granted and has in turn given them a flavor of his own understanding. I always make it a point to read his social media posts no matter how lengthy they are or what they are about. My only regret is that he doesn’t post very often.
+
+But maybe that is the price we pay for taking responsibility, we won’t have much to say. But what we say would be worth listening and trusting. And, if this article with a lot of scattered thoughts renders you mute and anxious about saying anything at least for a day I would consider a job well done.
