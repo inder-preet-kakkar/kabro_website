@@ -15,7 +15,7 @@ The paper is on how we can train Deep Neural Networks (DNNs) on small devices li
 
 Obviously inference itself is too difficult and when you talk of training, backward propagation, the most popular way to train DNNs is a mammoth on memory, the backward graphs, the storing of intermediate gradients, etc. can take at least as much and most cases much more memory than the forward pass. In fact, training on these small devices would about double the memory load, compounded by the fact that in the first place you squeezed in a model for inference, so there is even lesser memory left for backward propagation. So, the budget is very tight making the problem very complex. And this is precisely the problem this paper solved.
 
-On-Device Training Under 256KB Memory [^1], by Han lab from MIT made this significant breakthrough. I have been following Assoc. Prof. Song Han for a while now, ever since his groundbreaking PhD thesis [^2] in Tiny ML/Edge AI and would highly recommend reading this paper. As it is not just important but also a classic example of how complex engineering problems are solved-- where you have a few innovative ideas which bundled together give you a rich solution and you can't help admiring the creativity that went into it.
+<b> On-Device Training Under 256KB Memory </b> [^1], by Han lab from MIT made this significant breakthrough. I have been following Assoc. Prof. Song Han for a while now, ever since his groundbreaking PhD thesis [^2] in Tiny ML/Edge AI and would highly recommend reading this paper. As it is not just important but also a classic example of how complex engineering problems are solved-- where you have a few innovative ideas which bundled together give you a rich solution and you can't help admiring the creativity that went into it.
 
 This paper combines three such ideas which are briefly described below.
 
@@ -31,7 +31,7 @@ For compression of DNNs quantization is widely used. As an oversimplified exampl
 </figure>
 </center>
 
-Concentrate on the green and blue lines in the graph above. The blue line represents the ratio of the norm of weights and gradients while training a DNN in 32 bits and the green line represents the same for the quantized version of training. And one can see clearly how the ratios are for the latter are much higher meaning that the gradients are much smaller as compared to weights for a quantized graph. This mismatch between the two lines shows how quantizing can distort the gradient-weight ratio and hence the training process, barring training convergence to a higher accuracy.
+Concentrate on the green and blue lines in the graph above. The blue line represents the ratio of the norm of weights and gradients while training a DNN in 32 bits and the green line represents the same for the quantized version of training. And one can see clearly how the ratios for the latter are much higher meaning that the gradients are much smaller as compared to weights for a quantized graph. This mismatch between the two lines shows how quantizing can distort the gradient-weight ratio and hence the training process, barring training convergence to a higher accuracy.
 
 And the solution proposed is, Quantization Aware Scaling (QAS) where they reduce this ratio mismatch by compensating the gradient by the square of the scaling factor. The QAS is shown by the yellow line in the graph and it closely match the blue line for the unquantized 32 bits DNN.
 
@@ -77,7 +77,7 @@ fig = px.line(df, x='x', y='f(x)', color='k')
 fig.show()
 ```
 
-At the same time the gradient (or more popularly derivative) of the function is also distorted as shown in figure 2. But the derivative of $f(x)$ distorts a little differently as compared to function $f(dx)$.
+At the same time the gradient (or more popularly derivative) of the function is also distorted as shown in the figure below. But the derivative of $f(x)$ distorts a little differently as compared to function $f(dx)$.
 
 ```{python}
 #| echo: false
@@ -111,12 +111,12 @@ This extra factor of $\frac{1}{k}$ is what we need to compensate. Authors also a
 I'll rather quickly go over the other two tricks that the paper proposes. After all, need to encourage you all to read it.
 
 ## 2. Sparse updates
-On edge devices, we might not need to update the whole network; rather we can update only some layers whose weights and biases impact the accuracy the most. They propose doing a contribution analysis of weights and biases of each layer and choosing to update only a selected few. More trends like bias update being cheap are also discussed in the paper. Sparse updates allow the backward graph of a DNN to be pruned thereby decreasing the memory footprint for training the DNN.
+On edge devices, we might not need to update the whole network; rather we can update only some layers whose weights and biases impact accuracy the most. They propose doing a contribution analysis of weights and biases of each layer and choosing to update only a selected few. More trends like bias update being cheap are also discussed in the paper. Sparse updates allow the backward graph of a DNN to be pruned thereby decreasing the memory footprint for training the DNN.
 
 ## 3. Embedded mastery
-Lastly, some clever tricks in embedded programming are used in what the authors of the paper introduce as Tiny Training Engine (TTE). It creates a backward graph at compile time rather than runtime as pytorch or tensorflow use them. Dead code elimination, reordering operations so some can be fused together or used immediately instead of keeping them in memory. These all squeeze the very last bit of memory edge devices have.
+Lastly, some clever tricks in embedded programming are used in what the authors of the paper introduce as <b>Tiny Training Engine (TTE)</b>. It creates a backward graph at compile time rather than runtime as pytorch or tensorflow. Dead code elimination, reordering operations so some can be fused together or used immediately instead of keeping them in memory, etc. are the cherry on the cake.
 
-Hope this brief overview has kindled your interest in this line of research and if yes, do read their paper.
+Hope this brief overview kindled your interest in this line of research and if yes, do read their paper.
 
 
 
