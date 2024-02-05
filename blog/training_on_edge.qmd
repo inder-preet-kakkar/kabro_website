@@ -1,17 +1,17 @@
 ---
 title: <b>Training DNNs on Microcontrollers</b>
-order: 1
+order: 3
 from: markdown+emoji
 date: 5 February, 2024
-Words: ~0
+Words: ~1500
 ---
 
 
 
 
-This post to highlights a significant paper that came out in 2023 (and the best one I read in that year) which had a major impact on applied Deep Learning (DL). Although, the centre of attention was undoubtedly the release of Chat-GPT and the accompanying frenzy around Large Language Models (LLMs), this piece of research would have lasting consequences for the few years to come.
+This post highlights a significant paper that came out in 2023 (and the best one I read in that year) which had a major impact on applied Deep Learning (DL). Although, the center of attention was undoubtedly the release of Chat-GPT and the accompanying frenzy around Large Language Models (LLMs), this piece of research would have lasting consequences for the few years to come.
 
-The paper is on how we can train Deep Neural Networks (DNNs) on small devices like microcontrollers. Some of you working in DL might know that the most commonly used DNNs typically take a few hundred megabytes of memory, LLMs even more, around a few gigabytes. This is when there are billions of sensors, IoT devices, etc. where DNNs could be useful but cannot be deployed because these devices are small and typically have memories in the order of a few megabytes, so the gap to fill is a few order of magnitudes large. Some work has been done previously on inference on these small devices, like, Tensorflow Lite. But there wasn't much talk about training DNNs on these devices. And why so?
+The paper is on how we can train Deep Neural Networks (DNNs) on small devices like microcontrollers. Some of you working in DL might know that the most commonly used DNNs typically take a few hundred megabytes of memory, LLMs even more, around a few gigabytes. This is when there are billions of sensors, IoT devices, etc. where DNNs could be useful but cannot be deployed because these devices are small and typically have memories in the orders of a few megabytes, so the gap to fill is a few order of magnitudes large. Some work has been done previously on inference on these small devices, like, Tensorflow Lite. But there wasn't much talk about training DNNs on these devices. And why so?
 
 Obviously inference itself is too difficult and when you talk of training, backward propagation, the most popular way to train DNNs is a mammoth on memory, the backward graphs, the storing of intermediate gradients, etc. can take at least as much and most cases much more memory than the forward pass. In fact, training on these small devices would about double the memory load, compounded by the fact that in the first place you squeezed in a model for inference, so there is even lesser memory left for backward propagation. So, the budget is very tight making the problem very complex. And this is precisely the problem this paper solved.
 
@@ -22,7 +22,7 @@ This paper combines three such ideas which are briefly described below.
 
 ## 1. Scaling of gradients
 
-For compression of DNNs quantization is widely used. As an oversimplified example, consider weights of a DNN which are usually of the 32 bit float format which as the name suggests takes 32 bits. Quantization would mean representing the same weights in with lesser bits, let's take 8 bits for our example. Now casting this 32 bit number to a 8 bit number (which can be fixed point or floating) takes scaling. One way to do it is to take the maximum of all weights in a feedforward layer or a convolutional layer and and divide all the weights by it. The resulting weights would be between 0 and 1 and you can cast them to 8 bit format by multiplying with 127 (the 8 bit integer range is from -128 to 127). The authors had a very clever observation with this scaling, that it distorts the gradient.
+For compression of DNNs quantization is widely used. As an oversimplified example, consider weights of a DNN which are usually of the 32 bit float format which as the name suggests takes 32 bits. Quantization would mean representing the same weights with lesser bits, let's take 8 bits for our example. Now casting this 32 bit number to a 8 bit number (which can be fixed point or floating) takes scaling. One way to do it is to take the maximum of all weights in a feedforward layer or a convolutional layer and divide all the weights by it. The resulting weights would be between 0 and 1 and you can cast them to 8 bit format by multiplying with 127 (the 8 bit integer range is from -128 to 127). The authors had a very clever observation with this scaling, that it distorts the gradients.
 
 <center>
 <figure>
@@ -31,9 +31,9 @@ For compression of DNNs quantization is widely used. As an oversimplified exampl
 </figure>
 </center>
 
-Concentrate on the green and blue lines in the graph above. The blue line represents the ratio of the norm of weights and gradient while training a DNN in 32 bits and the green line represents the same for the quantized version of training. And one can see clearly how the ratios are for the latter are much higher meaning that the gradients are much smaller as compared to weights for a quantized graph. This mismatch between the two lines shows how quantizing can distort the gradient-weight ratio and hence the training process, barring training convergence to a higher accuracy.
+Concentrate on the green and blue lines in the graph above. The blue line represents the ratio of the norm of weights and gradients while training a DNN in 32 bits and the green line represents the same for the quantized version of training. And one can see clearly how the ratios are for the latter are much higher meaning that the gradients are much smaller as compared to weights for a quantized graph. This mismatch between the two lines shows how quantizing can distort the gradient-weight ratio and hence the training process, barring training convergence to a higher accuracy.
 
-And solution proposed is, Quantization Aware Scaling (QAS) where they reduce this ratio mismatch by compensating the gradient by the square of the scaling factor. The QAS is shown by the yellow line in graph and it closes match the blue line for the unquantized 32 bits DNN.
+And the solution proposed is, Quantization Aware Scaling (QAS) where they reduce this ratio mismatch by compensating the gradient by the square of the scaling factor. The QAS is shown by the yellow line in the graph and it closely match the blue line for the unquantized 32 bits DNN.
 
 One needs to think why the gradient of the quantized network has to be 'compensated by the square of the scaling factor'. There is a way to understand that intuitively.
 
@@ -111,7 +111,7 @@ This extra factor of $\frac{1}{k}$ is what we need to compensate. Authors also a
 I'll rather quickly go over the other two tricks that the paper proposes. After all, need to encourage you all to read it.
 
 ## 2. Sparse updates
-On edge devices, we might not need to update the whole network rather we can update only some layers whose weights and biases impact the accuracy the most. They propose doing a contribution analysis of weights and biases of each layer and choosing to update only a selected few. More trends like bias update being cheap are also discussed in the paper. Sparse updates allow the backward graph of a DNN to be pruned thereby decreasing the memory footprint for training the DNN.
+On edge devices, we might not need to update the whole network; rather we can update only some layers whose weights and biases impact the accuracy the most. They propose doing a contribution analysis of weights and biases of each layer and choosing to update only a selected few. More trends like bias update being cheap are also discussed in the paper. Sparse updates allow the backward graph of a DNN to be pruned thereby decreasing the memory footprint for training the DNN.
 
 ## 3. Embedded mastery
 Lastly, some clever tricks in embedded programming are used in what the authors of the paper introduce as Tiny Training Engine (TTE). It creates a backward graph at compile time rather than runtime as pytorch or tensorflow use them. Dead code elimination, reordering operations so some can be fused together or used immediately instead of keeping them in memory. These all squeeze the very last bit of memory edge devices have.
