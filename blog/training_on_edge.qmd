@@ -13,7 +13,7 @@ This post highlights a significant paper that came out in 2023 (and the best one
 
 The paper is on how we can train Deep Neural Networks (DNNs) on small devices like microcontrollers. Some of you working in DL might know that the most commonly used DNNs typically take a few hundred megabytes of memory, LLMs even more, around a few gigabytes. This is when there are billions of sensors, IoT devices, etc. where DNNs could be useful but cannot be deployed because these devices are small and typically have memories in the orders of a few megabytes, so the gap to fill is a few order of magnitudes large. Some work has been done previously on inference on these small devices, like, Tensorflow Lite. But there wasn't much talk about training DNNs on these devices. And why so?
 
-Obviously inference itself is too difficult and when you talk of training, backward propagation, the most popular way to train DNNs is a mammoth on memory, the backward graphs, the storing of intermediate gradients, etc. can take at least as much and most cases much more memory than the forward pass. In fact, training on these small devices would about double the memory load, compounded by the fact that in the first place you squeezed in a model for inference, so there is even lesser memory left for backward propagation. So, the budget is very tight making the problem very complex. And this is precisely the problem this paper solved.
+Obviously inference itself is too difficult and when you talk of training, backward propagation, the most popular way to train DNNs is a mammoth on memory, the backward graphs, the storing of intermediate gradients, etc. can take at least as much and in most cases much more memory than the forward pass. In fact, training on these small devices would about double the memory load, compounded by the fact that in the first place you squeezed in a model for inference, so there is even lesser memory left for backward propagation. So, the budget is very tight making the problem very complex. And this is precisely the problem this paper solved.
 
 <b> On-Device Training Under 256KB Memory </b> [^1], by Han lab from MIT made this significant breakthrough. I have been following Assoc. Prof. Song Han for a while now, ever since his groundbreaking PhD thesis [^2] in Tiny ML/Edge AI and would highly recommend reading this paper. As it is not just important but also a classic example of how complex engineering problems are solved-- where you have a few innovative ideas which bundled together give you a rich solution and you can't help admiring the creativity that went into it.
 
@@ -33,7 +33,7 @@ For compression of DNNs quantization is widely used. As an oversimplified exampl
 
 Concentrate on the green and blue lines in the graph above. The blue line represents the ratio of the norm of weights and gradients while training a DNN in 32 bits and the green line represents the same for the quantized version of training. And one can see clearly how the ratios for the latter are much higher meaning that the gradients are much smaller as compared to weights for a quantized graph. This mismatch between the two lines shows how quantizing can distort the gradient-weight ratio and hence the training process, barring training convergence to a higher accuracy.
 
-And the solution proposed is, Quantization Aware Scaling (QAS) where they reduce this ratio mismatch by compensating the gradient by the square of the scaling factor. The QAS is shown by the yellow line in the graph and it closely match the blue line for the unquantized 32 bits DNN.
+And the solution proposed is, Quantization Aware Scaling (QAS) where they reduce this ratio mismatch by compensating the gradient by the square of the scaling factor. The QAS is shown by the yellow line in the graph and it closely matches the blue line for the unquantized 32 bits DNN.
 
 One needs to think why the gradient of the quantized network has to be 'compensated by the square of the scaling factor'. There is a way to understand that intuitively.
 
@@ -97,7 +97,7 @@ $x' \rightarrow$ updated weight, $\eta \rightarrow$ learning rate, $x \rightarro
 For a quantized version this formula should look like:
 $$x' = \eta \frac{df(kx)}{dx} + kx$$
 
-But in a reality when we backpropagate we calculate the derivative w.r.t kx instead of x and in practice the equation becomes
+But in reality when we backpropagate we calculate the derivative w.r.t kx instead of x and in practice the equation becomes
 $$ x' = \eta \frac{df(kx)}{d(kx)} + kx $$
 Applying chain rule:
 $$ \frac{df(kx)}{dx} = \frac{df(kx)}{d(kx)} \frac{d(kx)}{dx} $$
@@ -108,7 +108,7 @@ $$x' = \eta \frac{1}{k} \frac{df(kx)}{dx} + kx$$
 
 This extra factor of $\frac{1}{k}$ is what we need to compensate. Authors also argue that as x is scaled by k so the gradient needs to have an extra factor of k. Hence, we multiply the gradient by $k^2$ compensating it and thus preserving the ratios during training.
 
-I'll rather quickly go over the other two tricks that the paper proposes. After all, need to encourage you all to read it.
+I'll rather quickly go over the other two tricks that the paper proposes. After all, need to encourage you to read it.
 
 ## 2. Sparse updates
 On edge devices, we might not need to update the whole network; rather we can update only some layers whose weights and biases impact accuracy the most. They propose doing a contribution analysis of weights and biases of each layer and choosing to update only a selected few. More trends like bias update being cheap are also discussed in the paper. Sparse updates allow the backward graph of a DNN to be pruned thereby decreasing the memory footprint for training the DNN.
@@ -116,7 +116,7 @@ On edge devices, we might not need to update the whole network; rather we can up
 ## 3. Embedded mastery
 Lastly, some clever tricks in embedded programming are used in what the authors of the paper introduce as <b>Tiny Training Engine (TTE)</b>. It creates a backward graph at compile time rather than runtime as pytorch or tensorflow. Dead code elimination, reordering operations so some can be fused together or used immediately instead of keeping them in memory, etc. are the cherry on the cake.
 
-Hope this brief overview kindled your interest in this line of research and if yes, do read their paper.
+All this come harmoniously together enabling training DNNs on microcontrollers. Hope this brief overview kindled your interest in this line of research and if yes, do read their paper.
 
 
 
