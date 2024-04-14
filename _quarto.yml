@@ -12,9 +12,10 @@ website:
 #      - index.qmd
       - portfolio.qmd
       - blog.qmd
-      - href: Inder_CV.pdf
-        target: _blank
-        text: Curriculum Vitae
+#      - href: Inder_CV.pdf
+#        target: _blank
+#        text: Curriculum Vitae
+
 #      - services.qmd
 
 format:
