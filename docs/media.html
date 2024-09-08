@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Inder Preet - Portfolio</title>
+<title>Inder Preet - Media &amp; Publications</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -60,38 +58,7 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -118,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./portfolio.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="./portfolio.html" rel="" target="">
  <span class="menu-text">Portfolio</span></a>
   </li>  
   <li class="nav-item">
@@ -126,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./media.html" rel="" target="">
+    <a class="nav-link active" href="./media.html" rel="" target="" aria-current="page">
  <span class="menu-text">Media</span></a>
   </li>  
 </ul>
@@ -146,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Portfolio</h1>
+<h1 class="title">Media &amp; Publications</h1>
 </div>
 
 
@@ -161,127 +128,79 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<style>
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
 
+.video-grid iframe {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+.description {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1rem;
+}
 
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-2">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1689611999972" data-listing-reading-time-sort="3">
-<a href="./portfolio/edgeAI.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-center">
-<p class="card-img-top">
-<img src="./images/edgeai_thumbnail.png" class="thumbnail-image card-img" style="height: 150px;">
+</style>
+<p>This page lists various publications, patents and presentations I have done over the years.</p>
+<section id="publications" class="level1">
+<h1>Publications</h1>
+<ol type="1">
+<li>I. Preet, O. Boydell and D. John, “Class-Separation Preserving Pruning for Deep Neural Networks,” in IEEE Transactions on Artificial Intelligence, doi: 10.1109/TAI.2022.3228511, <a href="https://ieeexplore.ieee.org/document/9982427/">link</a>.</li>
+<li>Aswin K Ramasubramanian, Robins Mathew, Inder Preet, Nikolaos Papakostas, “Review and application of Edge AI solutions for mobile collaborative robotic platforms”, Procedia CIRP, Volume 107, 2022, <a href="https://www.sciencedirect.com/science/article/pii/S2212827122003961">link</a>.</li>
+<li>Alastair McKinstry, Oisin Boydell, Quan Le, Inder Preet, Jennifer Hanafin, Manuel Fernandez, Adam Warde, Venkatesh Kannan, and Patrick Griffiths, “AI-Ready Training Datasets for Earth Observation: Enabling FAIR data principles for EO training data”. EGU General Assembly, 2021, <a href="https://meetingorganizer.copernicus.org/EGU21/EGU21-12384.html">link</a>.</li>
+</ol>
+</section>
+<section id="patents" class="level1">
+<h1>Patents</h1>
+<ol type="1">
+<li>Class Separation Aware Artificial Neural Network Pruning Method, International (PCT) Application No.&nbsp;PCT/EP2022/085998</li>
+<li>System and method for optimized PV placement and battery energy storage capacity.System and method for optimized PV placement and battery energy storage capacity. P23-1731WO01</li>
+</ol>
+</section>
+<section id="videos" class="level1">
+<h1>Videos</h1>
+<div class="video-grid">
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/RDPT1DpqXSE" title="“”" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="description">
+<b>PyCon Ireland, 2022</b>
+<p>
+Pruning &amp; Quantization for Deep Neural Networks&gt; Invited for a talk on my publication on optimizing DNNs for deployment at the edge.
 </p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<b>Harware software codesign for Deep Learning</b>
-</h5>
-<div class="card-text listing-description">
-Designing the whole pipeline – edge based neural network architecture, pruning and quantization techniques and automatic embedded code generation.
 </div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1687043970768" data-listing-reading-time-sort="3">
-<a href="./portfolio/AI4EO.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-center">
-<p class="card-img-top">
-<img src="./images/sate_image.png" class="thumbnail-image card-img" style="height: 150px;">
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/HW_Q-YXzxvI" title="“”" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="description">
+<b>Podcast with experts on Privacy Preserving ML</b>
+<p>
+Hear experts from IBM, Inpher and Oblivious.AI for a discussion on three technologies that can be used to protect data and models - differential privacy, secret computing and secure enclaves.
 </p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<b>AI for Earth Observation</b>
-</h5>
-<div class="card-text listing-description">
-Developed standards and specifications for European Space Agency and worked on image segmentation for EO data.
 </div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1685858017601" data-listing-reading-time-sort="1">
-<a href="./portfolio/ppml.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-center">
-<p class="card-img-top">
-<img src="./images/playlist_snap.png" class="thumbnail-image card-img" style="height: 150px;">
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/wJgGkBhb9v4" title="“”" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="description">
+<b>Hardware for Machine Learning</b>
+<p>
+Main challenges for deploying and training ML algorithms is discussed here and some solutions both on the hardware side and design of neural networks are presented.
 </p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<b>Privacy Preserving ML</b>
-</h5>
-<div class="card-text listing-description">
-Pedagogic activities for companies wanting to adopt Privacy Preserving Machine Learning (PPML).
 </div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1688025137378" data-listing-reading-time-sort="2">
-<a href="./portfolio/telecom_data.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-center">
-<p class="card-img-top">
-<img src="./images/sonalake/som.png" class="thumbnail-image card-img" style="height: 150px;">
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/MV_n0z0dCE4" title="“”" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="description">
+<b>Automatically optimizing DNNs for the edge</b>
+<p>
+A proof of concept for automating the optimization, pruning and quantization of DNNs for edge deployment is presented for the problem of anomaly detection in heartbeats using wearable sensors.
 </p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<b>Telecom Data Analytics</b>
-</h5>
-<div class="card-text listing-description">
-Worked on telecom network data to identify anomalies and correlation between different KPIs to track the source of anomaly.
 </div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
+</div>
 
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1688025463707" data-listing-reading-time-sort="2">
-<a href="./portfolio/wind_energy.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-center">
-<p class="card-img-top">
-<img src="./images/brightwind/thumbnail.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<b>Wind Energy Analytics</b>
-</h5>
-<div class="card-text listing-description">
-Explored support vector machines for hind casting wind speed data for wind farms and created an open-source library for wind energy analysis.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
 
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

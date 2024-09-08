@@ -12,6 +12,8 @@ website:
 #      - index.qmd
       - portfolio.qmd
       - blog.qmd
+      - text: "Media"
+        href: media.qmd
 #      - href: Inder_CV.pdf
 #        target: _blank
 #        text: Curriculum Vitae

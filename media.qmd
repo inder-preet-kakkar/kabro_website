@@ -1,0 +1,71 @@
+---
+title: Media & Publications
+---
+
+<style>
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.video-grid iframe {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+</style>
+
+
+
+
+This page lists various publications, patents and presentations I have done over the years.
+
+# Publications
+1. I. Preet, O. Boydell and D. John, "Class-Separation Preserving Pruning for Deep Neural Networks," in IEEE Transactions on Artificial Intelligence, doi: 10.1109/TAI.2022.3228511, [link](https://ieeexplore.ieee.org/document/9982427/).
+1. Aswin K Ramasubramanian, Robins Mathew, Inder Preet, Nikolaos Papakostas, "Review and application of Edge AI solutions for mobile collaborative robotic platforms", Procedia CIRP, Volume 107, 2022, [link](https://www.sciencedirect.com/science/article/pii/S2212827122003961).
+1. Alastair McKinstry, Oisin Boydell, Quan Le, Inder Preet, Jennifer Hanafin, Manuel Fernandez, Adam Warde, Venkatesh Kannan,
+ and Patrick Griffiths, "AI-Ready Training Datasets for Earth Observation: Enabling FAIR data principles for EO training data".
+ EGU General Assembly, 2021, [link](https://meetingorganizer.copernicus.org/EGU21/EGU21-12384.html).
+
+
+# Patents
+1. Class Separation Aware Artificial Neural Network Pruning Method, International (PCT) Application No. PCT/EP2022/085998
+1. System and method for optimized PV placement and battery energy storage capacity.System and method for optimized PV placement and battery energy storage capacity.
+P23-1731WO01
+
+# Videos
+
+<div class="video-grid">
+  {{< video https://youtu.be/RDPT1DpqXSE title="" >}}
+  <div class="description"><b>PyCon Ireland, 2022</b>
+  <p> Pruning & Quantization for Deep Neural Networks>
+   Invited for a talk on my publication on optimizing DNNs for deployment at the edge.</p></div>
+
+
+  {{< video https://www.youtube.com/watch?v=HW_Q-YXzxvI title="" >}}
+  <div class="description"><b>Podcast with experts on Privacy Preserving ML</b>
+  <p>Hear experts from IBM, Inpher and Oblivious.AI for a discussion on three technologies that can be used to protect data and
+   models - differential privacy, secret computing and secure enclaves.</p></div>
+
+  {{< video https://www.youtube.com/watch?v=wJgGkBhb9v4 title="" >}}
+  <div class="description"><b>Hardware for Machine Learning</b>
+  <p>Main challenges for deploying and training ML algorithms is discussed here and some solutions both on
+   the hardware side and design of neural networks are presented.</p></div>
+
+
+  {{< video https://www.youtube.com/watch?v=MV_n0z0dCE4 title="" >}}
+  <div class="description"><b>Automatically optimizing DNNs for the edge</b>
+  <p>A proof of concept for automating the optimization, pruning and quantization of DNNs for edge deployment
+  is presented for the problem of anomaly detection in heartbeats using wearable sensors.</p>
+  </div>
+
+
+</div>
