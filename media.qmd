@@ -28,18 +28,7 @@ title: Media & Publications
 
 This page lists various publications, patents and presentations I have done over the years.
 
-# Publications
-1. I. Preet, O. Boydell and D. John, "Class-Separation Preserving Pruning for Deep Neural Networks," in IEEE Transactions on Artificial Intelligence, doi: 10.1109/TAI.2022.3228511, [link](https://ieeexplore.ieee.org/document/9982427/).
-1. Aswin K Ramasubramanian, Robins Mathew, Inder Preet, Nikolaos Papakostas, "Review and application of Edge AI solutions for mobile collaborative robotic platforms", Procedia CIRP, Volume 107, 2022, [link](https://www.sciencedirect.com/science/article/pii/S2212827122003961).
-1. Alastair McKinstry, Oisin Boydell, Quan Le, Inder Preet, Jennifer Hanafin, Manuel Fernandez, Adam Warde, Venkatesh Kannan,
- and Patrick Griffiths, "AI-Ready Training Datasets for Earth Observation: Enabling FAIR data principles for EO training data".
- EGU General Assembly, 2021, [link](https://meetingorganizer.copernicus.org/EGU21/EGU21-12384.html).
 
-
-# Patents
-1. Class Separation Aware Artificial Neural Network Pruning Method, International (PCT) Application No. PCT/EP2022/085998
-1. System and method for optimized PV placement and battery energy storage capacity.System and method for optimized PV placement and battery energy storage capacity.
-P23-1731WO01
 
 # Videos
 
@@ -69,3 +58,16 @@ P23-1731WO01
 
 
 </div>
+
+# Publications
+1. I. Preet, O. Boydell and D. John, "Class-Separation Preserving Pruning for Deep Neural Networks," in IEEE Transactions on Artificial Intelligence, doi: 10.1109/TAI.2022.3228511, [link](https://ieeexplore.ieee.org/document/9982427/).
+1. Aswin K Ramasubramanian, Robins Mathew, Inder Preet, Nikolaos Papakostas, "Review and application of Edge AI solutions for mobile collaborative robotic platforms", Procedia CIRP, Volume 107, 2022, [link](https://www.sciencedirect.com/science/article/pii/S2212827122003961).
+1. Alastair McKinstry, Oisin Boydell, Quan Le, Inder Preet, Jennifer Hanafin, Manuel Fernandez, Adam Warde, Venkatesh Kannan,
+ and Patrick Griffiths, "AI-Ready Training Datasets for Earth Observation: Enabling FAIR data principles for EO training data".
+ EGU General Assembly, 2021, [link](https://meetingorganizer.copernicus.org/EGU21/EGU21-12384.html).
+
+
+# Patents
+1. Class Separation Aware Artificial Neural Network Pruning Method, International (PCT) Application No. PCT/EP2022/085998
+1. System and method for optimized PV placement and battery energy storage capacity.System and method for optimized PV placement and battery energy storage capacity.
+P23-1731WO01
