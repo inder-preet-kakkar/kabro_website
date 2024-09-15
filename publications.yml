@@ -1,0 +1,17 @@
+- title: "Publication 1"
+  authors: "Author A, Author B"
+  journal: "Journal Name"
+  year: 2023
+  url: "https://example.com/publication1"
+
+- title: "Publication 2"
+  authors: "Author C, Author D"
+  journal: "Another Journal"
+  year: 2022
+  url: "https://example.com/publication2"
+
+- title: "Publication 3"
+  authors: "Author E, Author F"
+  journal: "Yet Another Journal"
+  year: 2021
+  url: "https://example.com/publication3"

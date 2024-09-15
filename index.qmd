@@ -7,10 +7,11 @@ about:
   image: images/about_headshot.jpg
 ---
 
-Welcome to my website ! **My name is Inder Preet and I'm a data scientist interested in algorithms and models, I specialize in hardware software codesign for deep learning**, a cutting-edge technology that brings machine learning and artificial intelligence to devices at the edge of the network.
-It involves developing intelligent systems that run on devices with limited computing resources, such as smartphones, robots, wearables, and IoT sensors.
+Hi, this Inder, I am a Senior Data Scientist with over 7 years of experience in developing and deploying data-driven solutions across various industries. My expertise spans machine learning, deep learning, and edge AI, where I've led end-to-end projects that deliver measurable business impact.
 
-Additionally, I have worked on a lot of other things, like, time-series analysis, AI for Earth Observation, Privacy Preserving ML and most recently optimization for energy management in buildings.
+Throughout my career, I’ve honed my skills in solving complex problems using cutting-edge technologies and advanced analytics. I am particularly passionate about deep learning and edge AI, areas where I see enormous potential for innovation. My work has often focused on real-time, intelligent systems, leveraging these technologies to create scalable, efficient models that operate seamlessly in production environments.
+
+
 Checkout my [portfolio](portfolio.qmd) for more information on all these.
 <br>
 
@@ -19,13 +20,43 @@ I believe that personal and professional lives are complexly intertwined, so ins
 two themes across the [portfolio](portfolio.qmd) and [blog](blog.qmd).
 The same goes for the name KabroAI, which comes from my family's business of selling motor parts. But won't deny it is also a catchy name :wink:.
 -->
-### Get in touch
-If you're interested in learning more about these projects, please don't hesitate to get in touch. I'm always excited to connect with like-minded individuals and organizations who share my passion for bringing intelligent systems to the edge of the network.
+### Background
 
-**Contact**: me[at]inderpreet[dot]ie
+I graduate from St. Stephen's College, Delhi and did a masters in Computational science from University College Dublin, where my thesis was in
+machine learning.
 
 
+### Contact
+
+me[at]inderpreet[dot]ie
+
+### Companies I've Worked For
+
+
+```{=html}
+<div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 20px;">
+    <a class="btn" href="https://www.eaton.com/ie/en-gb.html" target="_blank" rel="noopener noreferrer">
+        <img src="../images/eaton.png" style="width: 150px; height: auto;" alt="Eaton Logo"/>
+    </a>
+    <a class="btn" href="https://ceadar.ie/" target="_blank" rel="noopener noreferrer">
+        <img src="../images/ceadar.png" style="width: 150px; height: auto;" alt="CeADAR Logo"/>
+    </a>
+    <a class="btn" href="https://www.brightwindanalysis.com/" target="_blank" rel="noopener noreferrer">
+        <img src="../images/brightwind.png" style="width: 150px; height: auto;" alt="Brightwind Logo"/>
+    </a>
+    <a class="btn" href="https://www.deshawresearch.com/" target="_blank" rel="noopener noreferrer">
+        <img src="../images/de_shaw.png" style="width: 150px; height: auto;" alt="D.E. Shaw Logo"/>
+    </a>
+</div>
+
+
+```
+
+
+
+### Profiles
 ::: {.column-page-inset .text-center}
+
 ```{=html}
 
 <a class="btn" href="https://www.linkedin.com/in/inder-preet-kakkar/" target="_blank" rel="noopener noreferrer">
