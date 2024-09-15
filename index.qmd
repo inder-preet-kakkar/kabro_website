@@ -7,7 +7,7 @@ about:
   image: images/about_headshot.jpg
 ---
 
-Hi, this Inder, I am a Senior Data Scientist with over 7 years of experience in developing and deploying data-driven solutions across various industries. My expertise spans machine learning, deep learning, and edge AI, where I've led end-to-end projects that deliver measurable business impact.
+Hi, Inder here! I am a Senior Data Scientist with over 7 years of experience in developing and deploying data-driven solutions across various industries. My expertise spans machine learning, deep learning, and edge AI, where I've led end-to-end projects that deliver measurable business impact.
 
 Throughout my career, I’ve honed my skills in solving complex problems using cutting-edge technologies and advanced analytics. I am particularly passionate about deep learning and edge AI, areas where I see enormous potential for innovation. My work has often focused on real-time, intelligent systems, leveraging these technologies to create scalable, efficient models that operate seamlessly in production environments.
 
@@ -22,7 +22,7 @@ The same goes for the name KabroAI, which comes from my family's business of sel
 -->
 ### Background
 
-I graduate from St. Stephen's College, Delhi and did a masters in Computational science from University College Dublin, where my thesis was in
+I graduated from St. Stephen's College, Delhi and did a masters in Computational science from University College Dublin, where my thesis was in
 machine learning.
 
 
