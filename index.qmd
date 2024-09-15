@@ -36,16 +36,16 @@ me[at]inderpreet[dot]ie
 ```{=html}
 <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 20px;">
     <a class="btn" href="https://www.eaton.com/ie/en-gb.html" target="_blank" rel="noopener noreferrer">
-        <img src="../images/eaton.png" style="width: 150px; height: auto;" alt="Eaton Logo"/>
+        <img src="images/eaton.png" style="width: 150px; height: auto;" alt="Eaton Logo"/>
     </a>
     <a class="btn" href="https://ceadar.ie/" target="_blank" rel="noopener noreferrer">
-        <img src="../images/ceadar.png" style="width: 150px; height: auto;" alt="CeADAR Logo"/>
+        <img src="images/ceadar.png" style="width: 150px; height: auto;" alt="CeADAR Logo"/>
     </a>
     <a class="btn" href="https://www.brightwindanalysis.com/" target="_blank" rel="noopener noreferrer">
-        <img src="../images/brightwind.png" style="width: 150px; height: auto;" alt="Brightwind Logo"/>
+        <img src="images/brightwind.png" style="width: 150px; height: auto;" alt="Brightwind Logo"/>
     </a>
     <a class="btn" href="https://www.deshawresearch.com/" target="_blank" rel="noopener noreferrer">
-        <img src="../images/de_shaw.png" style="width: 150px; height: auto;" alt="D.E. Shaw Logo"/>
+        <img src="images/de_shaw.png" style="width: 150px; height: auto;" alt="D.E. Shaw Logo"/>
     </a>
 </div>
 
