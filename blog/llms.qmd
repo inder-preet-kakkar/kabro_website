@@ -1,0 +1,217 @@
+---
+title: "<b>Looking inside LLMs</b>"
+order: 4
+date: "7 October, 2024"
+Words: ~300
+---
+
+Meta launched its Llama 3.1 model not too long ago claiming it to be the biggest open source LLM so far. And as such
+there has been a flurry of open-source LLMs out in the market. Company's are spending thousands in training these models
+and millions in the infrastructure needed to train and deploy these models.
+
+From a personal perspective, I am fascinated by the architecture of these vast networks—the layers, the weight distributions, and more. In my previous work [^1], we employed the activations of different layers to prune the neural network, eliminating redundant neurons and thereby shrinking the model for edge deployment. A key insight from that study was that the internal representations of these networks—often sparse despite having billions of parameters—contain valuable information that can further our understanding of the models. Interestingly, a significant number of these parameters are zero or near-zero, underscoring the inherent sparsity of these networks. Yet, this has not deterred corporate investments in discovering these "giganormous" sparse matrices. Over time, we anticipate learning more efficient methods to uncover these structures, which may also illuminate aspects of LLM explainability, as several studies have attempted by analyzing network activations.
+
+As an illustrative exercise, I have plotted Kernel Density Estimates (KDEs)—an advanced technique for visualizing distributions, superior to traditional histograms (for newcomers to KDE, see here [^2]). These plots reveal various patterns in the parameters of several open-source LLMs. I encourage you to explore these graphs and share your observations in the comments below.
+
+In the coming days, I plan to dive deeper into the exploration of these open-source LLMs and learn more about their underlying parameters. Stay tuned for more insights.
+
+## Kernel Density Estimates for LLM parameters
+
+::: {.callout-tip collapse="true" icon=false}
+## Llama 3.1 405B - Instruct
+
+::: {.callout-tip collapse="true" icon=false}
+### attention.wk.weight
+<embed src="../images/blog/llms/llama3_1_7B/kde_attention.wk.weight.html" style="width:100%; height:800px;" frameborder="0"></embed>
+:::
+::: {.callout-tip collapse="true" icon=false}
+### attention.wv.weight
+<embed src="../images/blog/llms/llama3_1_7B/kde_attention.wv.weight.html" style="width:100%; height:800px;" frameborder="0"></embed>
+:::
+::: {.callout-tip collapse="true" icon=false}
+### attention.wq.weight
+<embed src="../images/blog/llms/llama3_1_7B/kde_attention.wq.weight.html" style="width:100%; height:800px;" frameborder="0"></embed>
+:::
+::: {.callout-tip collapse="true" icon=false}
+### attention.wo.weight
+<embed src="../images/blog/llms/llama3_1_7B/kde_attention.wo.weight.html" style="width:100%; height:800px;" frameborder="0"></embed>
+:::
+::: {.callout-tip collapse="true" icon=false}
+### attention_norm.weight
+<embed src="../images/blog/llms/llama3_1_7B/kde_attention_norm.weight.html" style="width:100%; height:800px;" frameborder="0"></embed>
+:::
+::: {.callout-tip collapse="true" icon=false}
+### feed_forward.w1.weight
+<embed src="../images/blog/llms/llama3_1_7B/kde_feed_forward.w1.weight.html" style="width:100%; height:800px;" frameborder="0"></embed>
+:::
+::: {.callout-tip collapse="true" icon=false}
+### feed_forward.w2.weight
+<embed src="../images/blog/llms/llama3_1_7B/kde_feed_forward.w2.weight.html" style="width:100%; height:800px;" frameborder="0"></embed>
+:::
+::: {.callout-tip collapse="true" icon=false}
+### feed_forward.w3.weight
+<embed src="../images/blog/llms/llama3_1_7B/kde_feed_forward.w3.weight.html" style="width:100%; height:800px;" frameborder="0"></embed>
+:::
+::: {.callout-tip collapse="true" icon=false}
+### ffn_norm.weight
+<embed src="../images/blog/llms/llama3_1_7B/kde_ffn_norm.weight.html" style="width:100%; height:800px;" frameborder="0"></embed>
+:::
+:::
+
+::: {.callout-note collapse="true" icon=false}
+## Mistral 7B
+
+::: {.callout-note collapse="true" icon=false}
+### attention.wk.weight
+<embed src="../images/blog/llms/mistral7b/kde_attention.wk.weight.html" style="width:100%; height:800px;" frameborder="0"></embed>
+:::
+
+::: {.callout-note collapse="true" icon=false}
+### attention.wv.weight
+<embed src="../images/blog/llms/mistral7b/kde_attention.wv.weight.html" style="width:100%; height:800px;" frameborder="0"></embed>
+:::
+::: {.callout-note collapse="true" icon=false}
+### attention.wq.weight
+<embed src="../images/blog/llms/mistral7b/kde_attention.wq.weight.html" style="width:100%; height:800px;" frameborder="0"></embed>
+:::
+::: {.callout-note collapse="true" icon=false}
+### attention.wo.weight
+<embed src="../images/blog/llms/mistral7b/kde_attention.wo.weight.html" style="width:100%; height:800px;" frameborder="0"></embed>
+:::
+::: {.callout-note collapse="true" icon=false}
+### attention_norm.weight
+<embed src="../images/blog/llms/mistral7b/kde_attention_norm.weight.html" style="width:100%; height:800px;" frameborder="0"></embed>
+:::
+::: {.callout-note collapse="true" icon=false}
+### feed_forward.w1.weight
+<embed src="../images/blog/llms/mistral7b/kde_feed_forward.w1.weight.html" style="width:100%; height:800px;" frameborder="0"></embed>
+:::
+::: {.callout-note collapse="true" icon=false}
+### feed_forward.w2.weight
+<embed src="../images/blog/llms/mistral7b/kde_feed_forward.w2.weight.html" style="width:100%; height:800px;" frameborder="0"></embed>
+:::
+::: {.callout-note collapse="true" icon=false}
+### feed_forward.w3.weight
+<embed src="../images/blog/llms/mistral7b/kde_feed_forward.w3.weight.html" style="width:100%; height:800px;" frameborder="0"></embed>
+:::
+::: {.callout-note collapse="true" icon=false}
+### ffn_norm.weight
+<embed src="../images/blog/llms/mistral7b/kde_ffn_norm.weight.html" style="width:100%; height:800px;" frameborder="0"></embed>
+:::
+:::
+
+::: {.callout-caution collapse="true" icon=false}
+## GPT 2-medium 355B
+
+::: {.callout-caution collapse="true" icon=false}
+### attn.bias.json
+
+<embed src="../images/blog/llms/gpt2/kde_attn.bias.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
+:::
+::: {.callout-caution collapse="true" icon=false}
+### attn.c_attn.bias.json
+
+<embed src="../images/blog/llms/gpt2/kde_attn.c_attn.bias.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
+:::
+::: {.callout-caution collapse="true" icon=false}
+### attn.c_attn.weight.json
+
+<embed src="../images/blog/llms/gpt2/kde_attn.c_attn.weight.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
+:::
+::: {.callout-caution collapse="true" icon=false}
+### attn.c_proj.bias.json
+
+<embed src="../images/blog/llms/gpt2/kde_attn.c_proj.bias.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
+:::
+::: {.callout-caution collapse="true" icon=false}
+### attn.c_proj.weight.json
+
+<embed src="../images/blog/llms/gpt2/kde_attn.c_proj.weight.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
+:::
+::: {.callout-caution collapse="true" icon=false}
+### ln_1.bias.json
+
+<embed src="../images/blog/llms/gpt2/kde_ln_1.bias.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
+:::
+::: {.callout-caution collapse="true" icon=false}
+### ln_1.weight.json
+
+<embed src="../images/blog/llms/gpt2/kde_ln_1.weight.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
+:::
+::: {.callout-caution collapse="true" icon=false}
+### ln_2.bias.json
+
+<embed src="../images/blog/llms/gpt2/kde_ln_2.bias.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
+:::
+::: {.callout-caution collapse="true" icon=false}
+### ln_2.weight.json
+
+<embed src="../images/blog/llms/gpt2/kde_ln_2.weight.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
+:::
+::: {.callout-caution collapse="true" icon=false}
+### mlp.c_fc.bias.json
+
+<embed src="../images/blog/llms/gpt2/kde_mlp.c_fc.bias.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
+:::
+::: {.callout-caution collapse="true" icon=false}
+### mlp.c_fc.weight.json
+
+<embed src="../images/blog/llms/gpt2/kde_mlp.c_fc.weight.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
+:::
+::: {.callout-caution collapse="true" icon=false}
+### mlp.c_proj.bias.json
+
+<embed src="../images/blog/llms/gpt2/kde_mlp.c_proj.bias.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
+:::
+::: {.callout-caution collapse="true" icon=false}
+### mlp.c_proj.weight.json
+
+<embed src="../images/blog/llms/gpt2/kde_mlp.c_proj.weight.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
+:::
+Click to add a cell.
+:::
+
+
+::: {.callout-important collapse="true" icon=false}
+## Gemma 7B -  Instruct
+
+::: {.callout-important collapse="true" icon=false}
+### input_layernorm.weight.json
+
+<embed src="../images/blog/llms/gemma/kde_input_layernorm.weight.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
+:::
+::: {.callout-important collapse="true" icon=false}
+### mlp.down_proj.weight.json
+
+<embed src="../images/blog/llms/gemma/kde_mlp.down_proj.weight.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
+:::
+::: {.callout-important collapse="true" icon=false}
+### mlp.gate_proj.weight.json
+
+<embed src="../images/blog/llms/gemma/kde_mlp.gate_proj.weight.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
+:::
+::: {.callout-important collapse="true" icon=false}
+### mlp.up_proj.weight.json
+
+<embed src="../images/blog/llms/gemma/kde_mlp.up_proj.weight.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
+:::
+::: {.callout-important collapse="true" icon=false}
+### post_attention_layernorm.weight.json
+
+<embed src="../images/blog/llms/gemma/kde_post_attention_layernorm.weight.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
+:::
+::: {.callout-important collapse="true" icon=false}
+### self_attn.o_proj.weight.json
+
+<embed src="../images/blog/llms/gemma/kde_self_attn.o_proj.weight.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
+:::
+::: {.callout-important collapse="true" icon=false}
+### self_attn.qkv_proj.weight.json
+
+<embed src="../images/blog/llms/gemma/kde_self_attn.qkv_proj.weight.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
+:::
+
+:::
+
+[^1]: [Class-Separation Preserving Pruning for Deep Neural Networks](https://ieeexplore.ieee.org/document/9982427)
+[^2]: [Kernel Density Estimates](https://en.wikipedia.org/wiki/Kernel_density_estimation)

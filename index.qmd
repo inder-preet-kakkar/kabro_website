@@ -9,17 +9,13 @@ about:
 
 Hi, Inder here! I am a Senior Data Scientist with over 7 years of experience in developing and deploying data-driven solutions across various industries. My expertise spans machine learning, deep learning, and edge AI, where I've led end-to-end projects that deliver measurable business impact.
 
-Throughout my career, I’ve honed my skills in solving complex problems using cutting-edge technologies and advanced analytics. I am particularly passionate about deep learning and edge AI, areas where I see enormous potential for innovation. My work has often focused on real-time, intelligent systems, leveraging these technologies to create scalable, efficient models that operate seamlessly in production environments.
+Throughout my career, I have been solving complex problems using cutting-edge technologies and advanced analytics. My work has often focused on real-time, intelligent systems, leveraging these technologies to create scalable, efficient models that operate seamlessly.
 
 
 Checkout my [portfolio](portfolio.qmd) for more information on all these.
 <br>
 
-<!---
-I believe that personal and professional lives are complexly intertwined, so instead of creating a solely professional website, this one is a mix of both and you will see the
-two themes across the [portfolio](portfolio.qmd) and [blog](blog.qmd).
-The same goes for the name KabroAI, which comes from my family's business of selling motor parts. But won't deny it is also a catchy name :wink:.
--->
+
 ### Background
 
 I graduated from St. Stephen's College, Delhi and did a masters in Computational science from University College Dublin, where my thesis was in

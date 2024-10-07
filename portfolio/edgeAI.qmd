@@ -1,5 +1,5 @@
 ---
-title: <b>Harware software codesign for Deep Learning</b>
+title: <b>Efficient/Edge AI </b>
 order: 5
 from: markdown+emoji
 image: ../images/edgeai_thumbnail.png
