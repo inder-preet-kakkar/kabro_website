@@ -104,71 +104,70 @@ In the coming days, I plan to dive deeper into the exploration of these open-sou
 ## GPT 2-medium 355B
 
 ::: {.callout-caution collapse="true" icon=false}
-### attn.bias.json
+### attn.bias
 
 <embed src="../images/blog/llms/gpt2/kde_attn.bias.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
 :::
 ::: {.callout-caution collapse="true" icon=false}
-### attn.c_attn.bias.json
+### attn.c_attn.bias
 
 <embed src="../images/blog/llms/gpt2/kde_attn.c_attn.bias.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
 :::
 ::: {.callout-caution collapse="true" icon=false}
-### attn.c_attn.weight.json
+### attn.c_attn.weight
 
 <embed src="../images/blog/llms/gpt2/kde_attn.c_attn.weight.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
 :::
 ::: {.callout-caution collapse="true" icon=false}
-### attn.c_proj.bias.json
+### attn.c_proj.bias
 
 <embed src="../images/blog/llms/gpt2/kde_attn.c_proj.bias.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
 :::
 ::: {.callout-caution collapse="true" icon=false}
-### attn.c_proj.weight.json
+### attn.c_proj.weight
 
 <embed src="../images/blog/llms/gpt2/kde_attn.c_proj.weight.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
 :::
 ::: {.callout-caution collapse="true" icon=false}
-### ln_1.bias.json
+### ln_1.bias
 
 <embed src="../images/blog/llms/gpt2/kde_ln_1.bias.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
 :::
 ::: {.callout-caution collapse="true" icon=false}
-### ln_1.weight.json
+### ln_1.weight
 
 <embed src="../images/blog/llms/gpt2/kde_ln_1.weight.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
 :::
 ::: {.callout-caution collapse="true" icon=false}
-### ln_2.bias.json
+### ln_2.bias
 
 <embed src="../images/blog/llms/gpt2/kde_ln_2.bias.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
 :::
 ::: {.callout-caution collapse="true" icon=false}
-### ln_2.weight.json
-
+### ln_2.weight
 <embed src="../images/blog/llms/gpt2/kde_ln_2.weight.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
 :::
 ::: {.callout-caution collapse="true" icon=false}
-### mlp.c_fc.bias.json
+### mlp.c_fc.bias
 
 <embed src="../images/blog/llms/gpt2/kde_mlp.c_fc.bias.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
 :::
 ::: {.callout-caution collapse="true" icon=false}
-### mlp.c_fc.weight.json
+### mlp.c_fc.weight
 
 <embed src="../images/blog/llms/gpt2/kde_mlp.c_fc.weight.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
 :::
 ::: {.callout-caution collapse="true" icon=false}
-### mlp.c_proj.bias.json
+### mlp.c_proj.bias
 
 <embed src="../images/blog/llms/gpt2/kde_mlp.c_proj.bias.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
 :::
 ::: {.callout-caution collapse="true" icon=false}
-### mlp.c_proj.weight.json
+### mlp.c_proj.weight
 
 <embed src="../images/blog/llms/gpt2/kde_mlp.c_proj.weight.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
 :::
-Click to add a cell.
+
 :::
 
 
@@ -176,37 +175,37 @@ Click to add a cell.
 ## Gemma 7B -  Instruct
 
 ::: {.callout-important collapse="true" icon=false}
-### input_layernorm.weight.json
+### input_layernorm.weight
 
 <embed src="../images/blog/llms/gemma/kde_input_layernorm.weight.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
 :::
 ::: {.callout-important collapse="true" icon=false}
-### mlp.down_proj.weight.json
+### mlp.down_proj.weight
 
 <embed src="../images/blog/llms/gemma/kde_mlp.down_proj.weight.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
 :::
 ::: {.callout-important collapse="true" icon=false}
-### mlp.gate_proj.weight.json
+### mlp.gate_proj.weight
 
 <embed src="../images/blog/llms/gemma/kde_mlp.gate_proj.weight.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
 :::
 ::: {.callout-important collapse="true" icon=false}
-### mlp.up_proj.weight.json
+### mlp.up_proj.weight
 
 <embed src="../images/blog/llms/gemma/kde_mlp.up_proj.weight.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
 :::
 ::: {.callout-important collapse="true" icon=false}
-### post_attention_layernorm.weight.json
+### post_attention_layernorm.weight
 
 <embed src="../images/blog/llms/gemma/kde_post_attention_layernorm.weight.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
 :::
 ::: {.callout-important collapse="true" icon=false}
-### self_attn.o_proj.weight.json
+### self_attn.o_proj.weight
 
 <embed src="../images/blog/llms/gemma/kde_self_attn.o_proj.weight.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
 :::
 ::: {.callout-important collapse="true" icon=false}
-### self_attn.qkv_proj.weight.json
+### self_attn.qkv_proj.weight
 
 <embed src="../images/blog/llms/gemma/kde_self_attn.qkv_proj.weight.json.html" style="width:100%; height:500px;" frameborder="0"></embed>
 :::

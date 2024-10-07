@@ -20,6 +20,9 @@ website:
 
 #      - services.qmd
 
+execute:
+  cache: false
+
 format:
   html:
     theme: cosmo
