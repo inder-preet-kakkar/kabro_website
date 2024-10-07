@@ -6,7 +6,7 @@ Words: ~300
 ---
 
 Meta launched its Llama 3.1 model not too long ago claiming it to be the biggest open source LLM so far. And as such
-there has been a flurry of open-source LLMs out in the market. Company's are spending thousands in training these models
+there has been a flurry of open-source LLMs out in the market. Companies are spending thousands in training these models
 and millions in the infrastructure needed to train and deploy these models.
 
 From a personal perspective, I am fascinated by the architecture of these vast networks—the layers, the weight distributions, and more. In my previous work [^1], we employed the activations of different layers to prune the neural network, eliminating redundant neurons and thereby shrinking the model for edge deployment. A key insight from that study was that the internal representations of these networks—often sparse despite having billions of parameters—contain valuable information that can further our understanding of the models. Interestingly, a significant number of these parameters are zero or near-zero, underscoring the inherent sparsity of these networks. Yet, this has not deterred corporate investments in discovering these "giganormous" sparse matrices. Over time, we anticipate learning more efficient methods to uncover these structures, which may also illuminate aspects of LLM explainability, as several studies have attempted by analyzing network activations.
