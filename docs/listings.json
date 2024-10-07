@@ -12,6 +12,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/blog/llms.html",
       "/blog/training_on_edge.html",
       "/blog/responsibility_ltd.html",
       "/blog/hiring_and_managing_data_scientists.html"
