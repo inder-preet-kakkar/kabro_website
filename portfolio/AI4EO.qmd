@@ -2,7 +2,7 @@
 title: <b>AI for Earth Observation</b>
 order: 4
 from: markdown+emoji
-image: ../images/sate_image.png
+image: ../images/high_level_summary.png
 
 ---
 _____________
@@ -23,32 +23,6 @@ to train ML algorithms on EO data were also laid down.
     <figcaption> <center> Fig. 1: Different facets of EO data covered by AIREO specifications</center></figcaption>
 </figure>
 </center>
-
-We also worked on the problem of image segmentation in satellite images. Figure below shows a satellite image on the left
-with segmentation map consisting of roads, water, buildings and forest.
-<center>
-<figure>
-    <img src="../images/sate_image.png" width=99%>
-    <figcaption> <center> Fig. 2: Satellite image on the left with segmentation map showing roads, water, buildings and forest
-    on the right.</center></figcaption>
-</figure>
-</center>
-
-A common problem with segmentation in satellite images is that often the ground truth is not completely labelled, e.g.,
-some roads might be left out of the labels in training data. Training a deep neural network becomes difficult as we do not
-have the complete ground truth, as such we need to design the loss function such that if we are confident enough in
- some prediction we incorporate that in ground truth. To do that we use GANs (Generative Adversarial Networks) and borrow
- ideas from two different studies, [UNet](https://arxiv.org/abs/1505.04597) and one by [Mittal et. al.](https://arxiv.org/abs/1908.05724) Additional terms to the loss function were added
- and some modifications to the latter's pipeline were made. These modifications yielded better segmentation accuracy for some classes in the dataset.
-
-<center>
-<figure>
-    <img src="../images/gan_modifications.png" width=80%>
-    <figcaption> <center> Fig. 3: Modifications made to GAN: Added additional loss terms, removed a branch. Image source
-    from Mittal et. al. </center></figcaption>
-</figure>
-</center>
-
 
 -------------
 
