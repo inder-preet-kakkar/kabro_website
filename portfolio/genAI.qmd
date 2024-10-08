@@ -42,4 +42,3 @@ have the complete ground truth, as such we need to design the loss function such
 </center>
 -------------
 
-### Important links
