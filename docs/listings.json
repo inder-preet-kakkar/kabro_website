@@ -2,6 +2,7 @@
   {
     "listing": "/portfolio.html",
     "items": [
+      "/portfolio/genAI.html",
       "/portfolio/edgeAI.html",
       "/portfolio/AI4EO.html",
       "/portfolio/ppml.html",
