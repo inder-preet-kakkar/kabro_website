@@ -6,41 +6,28 @@ about:
   template: jolla
   image: images/about_headshot.jpg
 ---
+I am a Lead AI Scientist in the Speech team at IBM. My goal is to create profitable products from cutting edge AI often leading to new forntiers in research as well.
 
-
-I’m an innovator with a passion for cutting-edge technology, specializing in creating impactful products and building organizations that push the boundaries of innovation. My focus is on developing tech that’s not only novel and interesting but also meaningful and valued in the world. With expertise in research, leadership, and effective communication, I aim to influence industries and deliver solutions that make a tangible difference.
-
-Over the past 7 years, I’ve developed and deployed data-driven solutions across various industries, leveraging advanced technologies like machine learning, deep learning, and edge AI. I’ve led end-to-end projects that solve complex problems and drive measurable business impact, consistently seeking out the next challenge to stay at the forefront of innovation.
-
-I’m always learning and exploring new ideas, whether it’s through building, traveling, or connecting with others. My goal is to bring valuable, high-impact ideas to life and achieve success in both business and technology.
-
-Checkout my [portfolio](portfolio.qmd) for more information on all these.
+<b> Experience </b>: Areas that I have worked in include- speech models (STT-TTS), Efficient AI, Foundation models and time-series analysis. Checkout my [portfolio](portfolio.qmd) for more information on all these.
 <br>
 
 
-### Background
-
-I graduated from St. Stephen's College, Delhi and did a masters in Computational science from University College Dublin, where my thesis was in
+<b> Educational Background </b> : I graduated from St. Stephen's College, Delhi and did a masters in Computational science from University College Dublin, where my thesis was in
 machine learning.
 
 
-### Contact
 
-me[at]inderpreet[dot]ie
-
-### Companies I've Worked For
-
-
+<b> Companies I've Worked For </b>
 ```{=html}
 <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 20px;">
+    <a class="btn" href="https://www.ibm.com/" target="_blank" rel="noopener noreferrer">
+        <img src="images/ibm.png" style="width: 150px; height: auto;" alt="IBM Logo"/>
+    </a>
     <a class="btn" href="https://www.eaton.com/ie/en-gb.html" target="_blank" rel="noopener noreferrer">
         <img src="images/eaton.png" style="width: 150px; height: auto;" alt="Eaton Logo"/>
     </a>
     <a class="btn" href="https://ceadar.ie/" target="_blank" rel="noopener noreferrer">
         <img src="images/ceadar.png" style="width: 150px; height: auto;" alt="CeADAR Logo"/>
-    </a>
-    <a class="btn" href="https://www.brightwindanalysis.com/" target="_blank" rel="noopener noreferrer">
-        <img src="images/brightwind.png" style="width: 150px; height: auto;" alt="Brightwind Logo"/>
     </a>
     <a class="btn" href="https://www.deshawresearch.com/" target="_blank" rel="noopener noreferrer">
         <img src="images/de_shaw.png" style="width: 150px; height: auto;" alt="D.E. Shaw Logo"/>
@@ -50,9 +37,9 @@ me[at]inderpreet[dot]ie
 
 ```
 
+<b> Contact </b>: me[at]inderpreet[dot]ie
 
 
-### Profiles
 ::: {.column-page-inset .text-center}
 
 ```{=html}
