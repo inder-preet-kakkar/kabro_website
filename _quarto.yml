@@ -12,8 +12,10 @@ website:
 #      - index.qmd
       - portfolio.qmd
       - blog.qmd
-      - text: "Media"
+      - text: "Publications"
         href: media.qmd
+#      - text: "Life Logging"
+#        href: life_logging_app.qmd
 #      - href: Inder_CV.pdf
 #        target: _blank
 #        text: Curriculum Vitae
