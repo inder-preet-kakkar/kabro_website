@@ -1,0 +1,87 @@
+site:
+  title: "Inder Preet"
+  url: "https://www.inderpreet.ie"
+  description: |
+    Personal website of Inder Preet Kakkar, Lead AI Scientist. The site
+    includes an about page, portfolio of projects, blog posts on AI and
+    technology, and a list of media appearances and publications.
+
+pages:
+  - path: index.html
+    title: "About"
+    summary: |
+      Overview of professional background, experience with speech models,
+      efficient AI, foundation models and time-series analysis. Includes
+      contact links.
+  - path: blog.html
+    title: "Blog"
+    summary: |
+      Listing of posts covering technical and non-technical topics in AI
+      and data science.
+  - path: portfolio.html
+    title: "Portfolio"
+    summary: |
+      Grid view of projects ranging from earth observation and edge AI to
+      generative models and telecom analytics.
+  - path: media.html
+    title: "Media & Publications"
+    summary: |
+      Videos, talks, patents and a publications list.
+  - path: services.html
+    title: "Services"
+    summary: |
+      Offers consultancy and research help.
+
+blog_posts:
+  - path: blog/hiring_and_managing_data_scientists.html
+    title: "Hiring and Managing Data Scientists"
+    summary: |
+      Lessons from the author's job search and tips for structuring and
+      managing data science roles.
+  - path: blog/responsibility_ltd.html
+    title: "Responsibility Ltd."
+    summary: |
+      Reflection on speaking thoughtfully in public and how hype shapes
+      technology decisions.
+  - path: blog/training_on_edge.html
+    title: "Training DNNs on Microcontrollers"
+    summary: |
+      Review of a paper enabling deep learning training on memory-constrained
+      devices such as microcontrollers.
+  - path: blog/llms.html
+    title: "Looking inside LLMs"
+    summary: |
+      Exploration of parameter distributions in large language models with
+      kernel density plots.
+
+portfolio_projects:
+  - path: portfolio/wind_energy.html
+    title: "Wind Energy Analytics"
+    summary: |
+      Applied support vector machines to wind speed data and developed an
+      open-source library for wind energy analysis.
+  - path: portfolio/telecom_data.html
+    title: "Telecom Data Analytics"
+    summary: |
+      Time-series analysis of telecom KPIs to detect anomalies and
+      understand their sources.
+  - path: portfolio/ppml.html
+    title: "Privacy Preserving ML"
+    summary: |
+      Educational material for organizations adopting privacy-preserving
+      machine learning techniques.
+  - path: portfolio/AI4EO.html
+    title: "AI for Earth Observation"
+    summary: |
+      Worked with the European Space Agency to define standards for EO data
+      and applied image segmentation.
+  - path: portfolio/edgeAI.html
+    title: "Efficient/Edge AI"
+    summary: |
+      Developed low-footprint neural network architectures and automated
+      embedded code generation.
+  - path: portfolio/genAI.html
+    title: "Generative AI"
+    summary: |
+      Projects involving generative adversarial networks and large language
+      models.
