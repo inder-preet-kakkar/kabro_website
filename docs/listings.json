@@ -13,6 +13,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/blog/neurips25.html",
       "/blog/llms.html",
       "/blog/training_on_edge.html",
       "/blog/responsibility_ltd.html",
