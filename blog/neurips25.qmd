@@ -15,8 +15,8 @@ The very first day was quite interesting with a lot of contrasting ideas. The ve
 
 But the same day there was an extensive tutorial on benchmarks, including a very interesting panel discussion with panelists from public-policy, [Metr](https://metr.org/), creators of [SWE Bench](https://www.swebench.com/) the coding benchmark, and a few more. It was an extensive disucssion but the following two have stuck with me:
 
-1. It is tricky to talk about creating a benchmark. Some have stood the test of time—or, as someone said, are being used far beyond where they *should* be.
-2. The panelist from Meter also expressed some displeasure about ‘exotic’ benchmarks like ARC-AGI, which he claimed (I’m paraphrasing) do not correspond to real-world applications and are instead someone’s idea of what intelligence *could* be—spatial reasoning in this case. I have often, been annoyed preparing for these exams that give you riddles testing what they call spatio-temporal **reasoning**. Is that real intelligence? Is that even a good proxy?
+1. It is tricky to talk about creating a benchmark. Some have stood the test of time—or, as someone said, are being used far beyond they *should* be.
+2. The panelist from Metr also expressed some displeasure about ‘exotic’ benchmarks like ARC-AGI, which he claimed (I’m paraphrasing) do not correspond to real-world applications and are instead someone’s idea of what intelligence *could* be—spatial reasoning in this case. I have often, been annoyed preparing for these exams that give you riddles testing what they call spatio-temporal **reasoning**. Is that real intelligence? Is that even a good proxy?
 
 That inevitably made me think of the Apple talk in the morning, which now also seemed like an ‘exotic’ game chosen as a proxy for intelligence. The authors were aware of this and have responded to critics, but the justification felt less convincing when viewed from this angle. The strategy seems to be: choose a game the LLMs have likely never seen during training and then extrapolate performance there to draw conclusions about general reasoning capabilities. But yes, I do understand that intelligence itself is an ill-defined concept and this evaluation problem will always be slippery. Nevertheless, these studies and ‘exotic datasets’ are interesting because they shed light on new domains for LLMs and who knows where the next breakthrough comes from.
 
@@ -29,9 +29,9 @@ BeeAI framework from IBM also fits neatly into this new paradigm of dynamic eval
 
 Research and industry both recognize the limitations of current coding agents when it comes to production-quality code. Everyone acknowledges the issues with SWE-bench, and they admit that getting real production data for coding benchmarks is still a major bottleneck. If that’s the bottleneck, then are we just one step away from Microsoft (owning GitHub) or Google—with their armies of engineers locking down the advantage? Maybe. But Claude Code doing extremely well keeps me hopeful that we’ll see meaningful competition rather than consolidation.
 
-I see a new trend emergin as well, a huge proportion of papers on coding agents revolve around clever prompting strategies and decomposing problems into flows that *might* help the agent. But isn’t that just what all of us do anyway? You sketch a high-level plan before solving anything. It reminds me of a few years ago when ML use exploded and thousands of papers emerged where people applied standard ML techniques to a new domain, and master’s theses consisted of doing a giant grid search. Mine was the same, by the way ;)
+I see a new trend emerging as well, a huge proportion of papers on coding agents revolve around clever prompting strategies and decomposing problems into flows that *might* help the agent. But isn’t that just what all of us do anyway? You sketch a high-level plan before solving anything. It reminds me of a few years ago when ML use exploded and thousands of papers emerged where people applied standard ML techniques to a new domain, and master’s theses consisted of doing a giant grid search. Mine was the same, by the way ;)
 
-A cute piece of work was [Paper2Code](https://github.com/going-doer/Paper2Code) which talks about the forever needed task of generating code from research papers to replicate their studies or buidl them further. Something we’ve all desperately needed, so kudos to them.
+A cute piece of work was [Paper2Code](https://github.com/going-doer/Paper2Code) which talks about the forever needed task of generating code from research papers to replicate their studies or build them further. Something we’ve all desperately needed, so kudos to them.
 
 IBM’s [ALICE](https://research.ibm.com/blog/project-alice-software-bugs-agents) - Agentic Logic for Incident and Code bug Elimination, is another one I’m proud to see progress. It brings together multi-agent collaboration, incident analysis, and code-level reasoning to help teams diagnose complex system issues faster and more intelligently. This sits right at the intersection of AI agents, observability, and software automation—an area that’s evolving ridiculously fast.
 
@@ -41,7 +41,7 @@ IBM’s [ALICE](https://research.ibm.com/blog/project-alice-software-bugs-agents
 
 There was a lot happening on Efficient AI. The most intriguing work was from companies like [Eigen AI](https://www.eigenai.com/), [Pruna AI](https://www.pruna.ai/), [Furiosa AI](https://furiosa.ai/), and [Qualcomm](https://www.qualcomm.com/) (check out their demo on disaggregated LLM serving on AI accelerators). A lot of practical solutions for energy saving, compute optimization are finally making their way into the market with an ever crunching demand for chips.
 
-As usual [Han Lab](https://hanlab.mit.edu/) stood out with: **Jet-Nemotron** and **radial attention**—a sparse attention mechanism for long video generation. Sparse models are clearly becoming the theme again, but this time in they are expanding into and modalities as well.
+As usual [Han Lab](https://hanlab.mit.edu/) stood out with: **Jet-Nemotron** and **radial attention**—a sparse attention mechanism for long video generation. Sparse models are clearly becoming the theme again, but this time in they are expanding into other modalities as well.
 
 ## Wrapping up
 
