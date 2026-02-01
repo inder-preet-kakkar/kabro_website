@@ -6,18 +6,17 @@ about:
   template: jolla
   image: images/about_headshot.jpeg
 ---
-I am a Lead AI Scientist in the Speech team at IBM. My goal is to create profitable products from cutting edge AI often leading to new forntiers in research as well.
+I am a Lead AI Scientist in the Speech team at IBM with a goal to create profitable products from cutting-edge AI, often leading to new frontiers in research.
+My expertise is in [Efficient AI](portfolio/edgeAI.qmd), where I have worked on pruning, quantization, edge deployments, and novel efficient architectures. My previous roles have also led me to contribute to the open-source Python library [brightwind](portfolio/wind_energy.qmd). Check out my [portfolio](portfolio.qmd) for more information.
 
-<b> Experience </b>: Areas that I have worked in include- speech models (STT-TTS), Efficient AI, Foundation models and time-series analysis. Checkout my [portfolio](portfolio.qmd) for more information on all these.
+
+
+<b>Educational Background</b>: I graduated from St. Stephen's College, Delhi, and completed a Master's degree in Computational Science from University College Dublin, where my thesis focused on machine learning.
+
+<br>
 <br>
 
-
-<b> Educational Background </b> : I graduated from St. Stephen's College, Delhi and did a masters in Computational science from University College Dublin, where my thesis was in
-machine learning.
-
-
-
-<b> Companies I've Worked For </b>
+<b>Companies I've Worked For</b>
 ```{=html}
 <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 20px;">
     <a class="btn" href="https://www.ibm.com/" target="_blank" rel="noopener noreferrer">
@@ -37,7 +36,7 @@ machine learning.
 
 ```
 
-<b> Contact </b>: me[at]inderpreet[dot]ie
+<b>Contact</b>: me[at]inderpreet[dot]ie
 
 
 ::: {.column-page-inset .text-center}
