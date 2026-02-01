@@ -1,5 +1,15 @@
 [
   {
+    "listing": "/blog.html",
+    "items": [
+      "/blog/neurips25.html",
+      "/blog/llms.html",
+      "/blog/training_on_edge.html",
+      "/blog/responsibility_ltd.html",
+      "/blog/hiring_and_managing_data_scientists.html"
+    ]
+  },
+  {
     "listing": "/portfolio.html",
     "items": [
       "/portfolio/genAI.html",
@@ -8,16 +18,6 @@
       "/portfolio/ppml.html",
       "/portfolio/telecom_data.html",
       "/portfolio/wind_energy.html"
-    ]
-  },
-  {
-    "listing": "/blog.html",
-    "items": [
-      "/blog/neurips25.html",
-      "/blog/llms.html",
-      "/blog/training_on_edge.html",
-      "/blog/responsibility_ltd.html",
-      "/blog/hiring_and_managing_data_scientists.html"
     ]
   }
 ]
