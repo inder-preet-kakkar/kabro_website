@@ -4,7 +4,7 @@ sidebar: false
 from: markdown+emoji
 about:
   template: jolla
-  image: images/about_headshot.jpg
+  image: images/about_headshot.jpeg
 ---
 I am a Lead AI Scientist in the Speech team at IBM. My goal is to create profitable products from cutting edge AI often leading to new forntiers in research as well.
 
