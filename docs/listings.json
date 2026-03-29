@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/blog/turboquant.html",
       "/blog/neurips25.html",
       "/blog/llms.html",
       "/blog/training_on_edge.html",

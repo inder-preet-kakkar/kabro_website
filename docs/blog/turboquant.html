@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.31">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-03-29">
+
+<title>Building intuition for TurboQuant – Inder Preet</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-c1fac2584b48ed01fb6e278e36375074.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Inder Preet</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../portfolio.html"> 
+<span class="menu-text">Portfolio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../media.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title"><b>Building intuition for TurboQuant</b></h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 29, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p>Google’s TurboQuant has been in the news and rightly so, apart from moving billions in the market, the numbers speak for themselves, to quote from the paper “despite being more than 4×quantized, achieves the same exact performance as the uncompressed baseline”. So, I started digging into the paper and yet again this is a classic example of good research, you come up a few good ideas and then combine them together to make an awesome idea. And they do so with mathematical rigor borrowing concepts from high-dimensional geometry and information theory.</p>
+<p>For those of us with a less theoretical and a more phenomenological approach to deep learning, or to put it bluntly an aversion to dense mathematical proofs, wouldn’t it be good to build some intuition around the key ideas in the paper. So, here is an attempt to understand TurboQuant and why it works, I’ll give a background of quantization and then move on to the ideas in the paper. Feel free to skip sec 1. if you are well versed with the quantization of LLMs and the need for it. Note that this is not to be treated as a monograph for TurboQuant but more of an “aide” that can help you dissect the math in the paper.</p>
+<section id="why-quantize-your-llms" class="level2">
+<h2 class="anchored" data-anchor-id="why-quantize-your-llms">1. Why quantize your LLMs</h2>
+<p>In a previous <a href="https://www.inderpreet.ie/blog/llms.html">blog post</a>, I looked at the weight distributions of various open-source LLMs using KDE plots. The sparsity patterns were striking, billions of parameters, many near-zero. But weights are only half the memory story. The other half (or more) is activations, and specifically the KV cache. If you recall the scaled dot-product attention, a.k.a. the attention equation: <span class="math display">\[
+\text{Attention}(Q, K, V) = \text{softmax}\!\left(\frac{QK^\top}{\sqrt{d_k}}\right)V
+\]</span></p>
+<p>where</p>
+<ul>
+<li><span class="math inline">\(Q \in \mathbb{R}^{n \times d_k}\)</span> is the <strong>query</strong> matrix,</li>
+<li><span class="math inline">\(K \in \mathbb{R}^{n \times d_k}\)</span> is the <strong>key</strong> matrix,</li>
+<li><span class="math inline">\(V \in \mathbb{R}^{n \times d_v}\)</span> is the <strong>value</strong> matrix,</li>
+<li><span class="math inline">\(d_k\)</span> is the dimension of each key/query vector,</li>
+<li><span class="math inline">\(QK^\top\)</span> computes the pairwise similarity between every query and key, and</li>
+<li><span class="math inline">\(\frac{1}{\sqrt{d_k}}\)</span> is a scaling factor that prevents dot products from growing large and pushing softmax into saturation.</li>
+</ul>
+<p>During inference, <span class="math inline">\(Q\)</span> is computed fresh for the current token only but <span class="math inline">\(K\)</span> and <span class="math inline">\(V\)</span> are needed from all previous tokens. Rather than recomputing the key and value projections for every past token at every step, you cache them. This cache grows linearly with sequence length. A quick back-of-the-envelope calculation could tell you-</p>
+<p>For <b> Llama-3.1-8B </b>: 32 layers, 8 KV heads, 128-dim per head.</p>
+<p>At 128K context length: 128,000 tokens × 32 layers × 8 heads × 128 dims × 2 (keys + values)</p>
+<p>Each value in float16 (2 bytes) Total: 128,000 × 32 × 8 × 128 × 2 × 2 bytes ≈ 16 GB</p>
+<p>And that is just for KV cache, so there is a strong case to quantize these.</p>
+<section id="not-all-dimensions-are-created-equal" class="level3">
+<h3 class="anchored" data-anchor-id="not-all-dimensions-are-created-equal">1.1 Not all dimensions are created equal</h3>
+<p>But there are some obvious gotchas when quantizing, first of all it is lossy, you lose information when quantizing the KV cache. Secondly, and more importantly, the components of a high-dimensional vector aren’t equal, some carry more variance, some less, they may be correlated and some might be more important for your task than the others, e.g.&nbsp;the <a href="https://machinelearning.apple.com/research/the-super-weight">Super Weight</a> paper by Apple shows this, even my own pruning study aims to quantify and rank the importance of these vectors- <a href="https://ieeexplore.ieee.org/document/9982427">CS-Prune</a>. With KV vectors, a handful of channels carry most of the numerical weight. The rest are comparatively tiny. This is a well-documented property of transformer activations whereby studies have all observed these “outlier channels”. If you naively quantize each component independently with a uniform grid, you’re wasting bits. So, there are hundreds of papers out there with tricks to tackle this and TurboQuant is one of them.</p>
+<p>Let’s play around with the widget below (thanks to my co-author Claude Opus 4.6 for writing the code for it) to build an intuition for spiky KV cache. Set the quantization slider to 2 bits and look at the bottom-right chart: per-coordinate quantization error. The outlier channels (coral bars) have dramatically larger errors than the rest. Why? A uniform quantization grid allocates the same number of levels across the entire range [min, max]. If one channel reaches ±20 while most channels live in ±0.5, those 4 levels (at 2-bit) must span a range of 40 — giving each level a width of 10. For the channels that vary by only ±0.5, that’s a ridiculously coarse grid. You’re wasting 3 of your 4 levels on values no channel ever takes. Switch to uniform (ideal) vectors and the problem vanishes — energy is spread evenly, every channel benefits equally from quantization, and the errors drop dramatically. This is the core observation that motivates TurboQuant: if only we could make every channel carry equal energy, naive per-coordinate quantization would work well. And as we’ll see in the next section, that’s exactly what a random rotation does.</p>
+<iframe id="kvCacheWidget" src="../images/blog/turboquant/kv_cache_coordinate_inequality.html" width="100%" frameborder="0" style="border: 1px solid #ddd; border-radius: 4px; min-height: 600px;"></iframe>
+<script>
+  window.addEventListener('load', function() {
+    const iframe = document.getElementById('kvCacheWidget');
+    iframe.onload = function() {
+      try {
+        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+        const height = iframeDoc.body.scrollHeight;
+        iframe.style.height = (height + 20) + 'px';
+      } catch(e) {
+        // Fallback if cross-origin restrictions apply
+        iframe.style.height = '750px';
+      }
+    };
+  });
+</script>
+</section>
+</section>
+<section id="random-rotation-why-high-dimensional-spheres-have-no-spiky-points" class="level2">
+<h2 class="anchored" data-anchor-id="random-rotation-why-high-dimensional-spheres-have-no-spiky-points">2. Random rotation: Why high-dimensional spheres have no spiky points</h2>
+<p>TurboQuant’s first big idea is random rotation, above we saw that all dimensions are not equal and uniform quantisation would be wasting bits. Some other approaches learn a per-channel scaling (like SmoothQuant), or compute min/max statistics per block (like GPTQ and AWQ). But these are data-dependent and they can’t adapt to distribution shifts during generation which is not something you want in your deployed LLM.</p>
+<p>But TurboQuant takes a different path, instead of adapting the quantizer to the data, it transforms the data so that any simple quantizer works well. And that transformation is the random rotation of the vector. To quote-</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+From the paper
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We apply a random rotation to the input vectors, thereby inducing a Beta distribution on each coordinate, irrespective of the input vectors themselves. In high dimensions d, the distribution of each coordinate converges to a Gaussian distribution N(1,1/d) due to concentration of measure and the central limit theorem.</p>
+</div>
+</div>
+So, what is this random rotation and how does it remove the variance in these high dimensional vectors. If you look at the flow chart below showing the order of operations in TurboQuant, you’ll see that the vector is first normalized and then rotated. So, you can think of the normalized vector as a unit vector on a sphere of d dimensions (the dimension of the vector itself). Now a random orthogonal matrix Π is chosen (dimension d x d) and Π X which effectively translates to rotating that unit vector on that sphere.<br>
+
+<center>
+<figure class="figure">
+<img src="../images/blog/turboquant/turboquant_pipeline_clarification.svg" width="80%" class="figure-img">
+<figcaption>
+<center>
+Fig. 1: Flowchart for vector operations
+</center>
+</figcaption>
+</figure>
+</center>
+<p><b>But won’t spread-out vectors become spiky?</b> An obvious question to ask, and it’s true in low dimensions, rotate [0.707, 0.707] by 45° and you get [1, 0]. You just created a spike. In 2D, rotation is a zero-sum game. But on a high d dimensional sphere there is nowhere to be spiky. A unit vector in d = 1000 dimensions must satisfy x₁² + x₂² + … + x₁₀₀₀² = 1. If one coordinate were “large”, say x₁ = 0.5, that single coordinate would consume 25% of the total budget. The remaining 999 coordinates share the rest. But concentration of measure tells us this is astronomically unlikely for a random point on the sphere. The expected value of |xᵢ| is roughly 1/√d, and deviations beyond a few multiples of this are exponentially suppressed.</p>
+<!-- let's use the analogy of shuffling a deck of cards. A "spiky" vector is like a sorted deck. A "spread" vector is like a well-shuffled deck. "If shuffling randomises a sorted deck, won't it also un-randomise a shuffled deck?" In a 4 card deck there's a 1/24 chance. In a 1000 card deck, the probability of any shuffle producing a sorted output is 1/1000! ≈ 10⁻²⁵⁶⁸. The space of "sorted-looking" arrangements is incomprehensibly small compared to the space of "shuffled-looking" ones. -->
+<p>Again, let’s resort to the widget below in building the intuition of how rotating the vectors removes their “spikyness” and smoothens their distribution.</p>
+<p>Drag the dimension from 3 to 500 and note the following:</p>
+<ul>
+<li><p>At d = 3: The angle histogram (top-left) is spread broadly from 0° to 90°. Some rows of Π happen to point near x, others point nearly perpendicular. The resulting coordinates (top-right) are wildly unequal, some large, some tiny. The before/after chart below these shows the spike didn’t fully disappear.</p></li>
+<li><p>At d = 50: The angle histogram is already tightening around ~85°. Most rows of Π make roughly the same angle with x. The coordinates are becoming more uniform.</p></li>
+<li><p>At d = 500: The angles are packed into a narrow band around 89°. Every single row of Π is almost exactly perpendicular to x. The coordinates are all nearly the same tiny magnitude. The before/after chart shows the spike has been completely levelled.</p></li>
+</ul>
+<p>The bottom chart shows this concentration quantitatively — the standard deviation of angles drops from ~25° at d=3 to ~3° at d=100 to ~1° at d=500.</p>
+<iframe id="kvCacheWidget" src="../images/blog/turboquant/why_rotation_works_dot_product_mechanism.html" width="100%" frameborder="0" style="border: 1px solid #ddd; border-radius: 4px; min-height: 600px;"></iframe>
+<script>
+  window.addEventListener('load', function() {
+    const iframe = document.getElementById('kvCacheWidget');
+    iframe.onload = function() {
+      try {
+        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+        const height = iframeDoc.body.scrollHeight;
+        iframe.style.height = (height + 20) + 'px';
+      } catch(e) {
+        // Fallback if cross-origin restrictions apply
+        iframe.style.height = '750px';
+      }
+    };
+  });
+</script>
+<p>Now to complete the picture from the flowchart to widget above, here is the mechanism in full:</p>
+<p>Step 1: Each new coordinate of Π X is a dot product. Step 2: The rows of Π are random directions on the sphere. In high dimensions, a random direction makes an angle with any fixed vector x that concentrates tightly around 90° Step 3: Since all angles are ≈ 90°, all cosines are ≈ 0, with small random fluctuations of order 1/√d.&nbsp;Therefore all coordinates have roughly the same magnitude, regardless of where x pointed originally. The paper gives theory derived upper and lower bounds for these (or errors in these) Step 4: The small fluctuations around cos(90°) = 0 follow the Beta distribution from Lemma 1, which converges to a Gaussian N(0, 1/d) in high dimensions, for simplicity let’s just assume we are working with higher dimensions.</p>
+<p>The rotation doesn’t “redistribute variance.” It re-expresses x as dot products with d random directions, and in high dimensions, those dot products are all nearly identical in magnitude because every random direction makes nearly the same angle with x.</p>
+<p>Thus, the distribution of Π X becomes approximately gaussian and that is easy to quantize with simple clustering method, for b bit quantization, there are <span class="math inline">\(2^b\)</span> clusters which can quantize the gaussian distribution.</p>
+</section>
+<section id="the-bias-problem-and-its-fix" class="level2">
+<h2 class="anchored" data-anchor-id="the-bias-problem-and-its-fix">3. The bias problem and its fix</h2>
+<p>Honestly, the paper could have ended there but the authors saw that at 2-3 bits of quantization, the <span class="math inline">\(2^b\)</span> clusters introduces an extra error. Recall the attention equation earlier, there is a dot product between Q and K which is then fed to softmax activation.</p>
+<p><span class="math display">\[
+\text{softmax}\!\left(\frac{QK^\top}{\sqrt{d_k}}\right)
+\]</span></p>
+<p>Softmax is a nonlinear function, and scaling its inputs changes the shape of the output distribution. Smaller logits → flatter attention → the model loses its ability to focus on the most relevant tokens. The problem isn’t that the reconstructed (unquantized) vectors are far from the originals. The problem is that the inner product ⟨q, k̃⟩ between a query and a quantized key is systematically too low. The quantizer has a multiplicative bias: it estimates ⟨q, k⟩ as roughly α·⟨q, k⟩ where α &lt; 1.At b=1, this bias factor is 2/π ≈ 0.637, i.e.&nbsp;your attention logits are 36% too small. At b=2, it’s around 0.92. At b=4, it’s 0.998 — negligible.</p>
+<p>The authors’ fix is elegant. Instead of redesigning the quantizer to be unbiased, they keep the quantizer and correct the bias after the fact. The recipe being, let’s say you have b bits you can use for quantization, it reserves 1 bit out of these for storing the sign of the error in the quantized vector. The error being the difference between the original vector and the vector recreated from the quantized vector (reconstructed). This is what they call the QJL term, and it exactly compensates for whatever bias was introduced.</p>
+</section>
+<section id="closing" class="level2">
+<h2 class="anchored" data-anchor-id="closing">4. Closing</h2>
+<p>Sections 2 &amp; 3 together should tell you what I meant when I said that the paper combines “a few good ideas into an awesome idea”. Would highly recommend going through the rigorous mathematical proofs in the paper which also quantify what the upper and lower bounds in the errors of the approximations, which our intuition above will most likely not be able to get.</p>
+<p>And what the authors have achieved is remarkable:</p>
+<p><b> At 3.5 bits per channel (LongBench with Llama-3.1-8B) it TurboQuant matches the full 16-bit baseline, a 4.5× compression of your KV cache without any accuracy loss. Not on short contexts, not on long contexts, not on needle-in-a-haystack retrieval. And with a theoretical proof you should be within 2.7× of optimal.</b></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/www\.inderpreet\.ie");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "inder-preet-kakkar/website_comments";
+    script.dataset.repoId = "R_kgDOKBYtNQ";
+    script.dataset.category = "General";
+    script.dataset.categoryId = "DIC_kwDOKBYtNc4CYOhM";
+    script.dataset.mapping = "title";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

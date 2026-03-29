@@ -1,0 +1,191 @@
+
+<style>
+body {
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+.mc{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:10px 14px;}
+.mc-l{font-size:12px;color:var(--color-text-secondary);margin:0 0 2px;}
+.mc-v{font-size:16px;font-weight:500;margin:0;color:var(--color-text-primary);}
+</style>
+
+<div style="padding:0.5rem 0; background-color: #f5f5f5;">
+  <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:1rem;">
+    <span style="font-size:14px;color:var(--color-text-secondary);">Dimension d =</span>
+    <input type="range" min="2" max="500" value="3" id="dS" style="max-width:200px;" step="1" />
+    <span id="dO" style="font-size:14px;font-weight:500;min-width:36px;">3</span>
+    <span style="font-size:14px;color:var(--color-text-secondary);margin-left:12px;">Input vector</span>
+    <button id="bSpiky" style="font-size:13px;">spiky [1,0,0,...]</button>
+    <button id="bSpread" style="font-size:13px;">spread [1/sqrt(d),...]</button>
+    <button id="bReroll" style="font-size:13px;">re-roll Π</button>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;margin-bottom:1rem;">
+    <div class="mc"><p class="mc-l">mean angle to random rows</p><p class="mc-v" id="mAngle">—</p></div>
+    <div class="mc"><p class="mc-l">std dev of angles</p><p class="mc-v" id="mAngleStd">—</p></div>
+    <div class="mc"><p class="mc-l">max |new coord|</p><p class="mc-v" id="mMaxC">—</p></div>
+    <div class="mc"><p class="mc-l">std dev of new coords</p><p class="mc-v" id="mStdC">—</p></div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;">
+    <div>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:6px;font-size:12px;color:var(--color-text-secondary);">
+        <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#3266ad;"></span>angle between x and each row of Π</span>
+      </div>
+      <p style="font-size:13px;color:var(--color-text-secondary);margin:0 0 4px;">In high-d, all angles cluster near 90°</p>
+      <div style="position:relative;width:100%;height:220px;"><canvas id="angleHist"></canvas></div>
+    </div>
+    <div>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:6px;font-size:12px;color:var(--color-text-secondary);">
+        <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#1D9E75;"></span>new coordinate values (= dot products with rows)</span>
+      </div>
+      <p style="font-size:13px;color:var(--color-text-secondary);margin:0 0 4px;">All similar magnitude because all angles ≈ 90°</p>
+      <div style="position:relative;width:100%;height:220px;"><canvas id="coordBars"></canvas></div>
+    </div>
+  </div>
+
+  <div style="margin-top:1.5rem;">
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:6px;font-size:12px;color:var(--color-text-secondary);">
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#D85A30;"></span>original coordinates</span>
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#1D9E75;"></span>after rotation (= dot products with random dirs)</span>
+    </div>
+    <p style="font-size:13px;color:var(--color-text-secondary);margin:0 0 4px;">Before vs after: spiky becomes uniform because each coord = ⟨row_i, x⟩ ≈ cos(~90°)</p>
+    <div style="position:relative;width:100%;height:220px;"><canvas id="beforeAfter"></canvas></div>
+  </div>
+
+  <div style="margin-top:1.5rem;">
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:6px;font-size:12px;color:var(--color-text-secondary);">
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#3266ad;"></span>angle std dev (decreasing = more concentrated at 90°)</span>
+    </div>
+    <p style="font-size:13px;color:var(--color-text-secondary);margin:0 0 4px;">Angle concentration vs dimension: higher d → angles pack tighter around 90°</p>
+    <div style="position:relative;width:100%;height:200px;"><canvas id="angleSweep"></canvas></div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+const isDk=matchMedia('(prefers-color-scheme:dark)').matches;
+const blue='#3266ad',coral='#D85A30',teal='#1D9E75',purple='#7F77DD';
+const grayG='rgba(0,0,0,0.15)';
+const txtC='#666';
+
+function gauss(){let u,v,s;do{u=Math.random()*2-1;v=Math.random()*2-1;s=u*u+v*v;}while(s>=1||s===0);return u*Math.sqrt(-2*Math.log(s)/s);}
+function normalize(v){let n=0;for(const x of v)n+=x*x;n=Math.sqrt(n);return v.map(x=>x/n);}
+function dot(a,b){let s=0;for(let i=0;i<a.length;i++)s+=a[i]*b[i];return s;}
+
+function qr(d){
+  const m=[];for(let i=0;i<d;i++){m[i]=[];for(let j=0;j<d;j++)m[i][j]=gauss();}
+  const q=m.map(r=>r.slice());
+  for(let j=0;j<d;j++){
+    for(let i=0;i<j;i++){let dt=0;for(let k=0;k<d;k++)dt+=q[i][k]*q[j][k];for(let k=0;k<d;k++)q[j][k]-=dt*q[i][k];}
+    let nm=0;for(let k=0;k<d;k++)nm+=q[j][k]*q[j][k];nm=Math.sqrt(nm);
+    for(let k=0;k<d;k++)q[j][k]/=nm;
+  }
+  return q;
+}
+
+let charts={};
+function mkChart(id,type,cfg){if(charts[id])charts[id].destroy();charts[id]=new Chart(document.getElementById(id),{type,...cfg});return charts[id];}
+
+let currentType='spiky';
+
+function run(){
+  const d=parseInt(document.getElementById('dS').value);
+  document.getElementById('dO').textContent=d;
+
+  let x;
+  if(currentType==='spiky'){x=new Array(d).fill(0);x[0]=1;}
+  else{x=new Array(d).fill(1/Math.sqrt(d));}
+
+  const Pi=qr(d);
+  const newCoords=[];
+  const angles=[];
+  for(let i=0;i<d;i++){
+    const dp=dot(Pi[i],x);
+    newCoords.push(dp);
+    const cosA=Math.min(1,Math.max(-1,dp));
+    angles.push(Math.acos(Math.abs(cosA))*180/Math.PI);
+  }
+
+  const meanAngle=angles.reduce((a,b)=>a+b,0)/d;
+  const stdAngle=Math.sqrt(angles.reduce((a,b)=>a+(b-meanAngle)**2,0)/d);
+  document.getElementById('mAngle').textContent=meanAngle.toFixed(1)+'°';
+  document.getElementById('mAngleStd').textContent=stdAngle.toFixed(1)+'°';
+  document.getElementById('mAngleStd').style.color=stdAngle<10?teal:coral;
+  document.getElementById('mMaxC').textContent=Math.max(...newCoords.map(Math.abs)).toFixed(4);
+  const cMean=newCoords.reduce((a,b)=>a+b,0)/d;
+  const cStd=Math.sqrt(newCoords.reduce((a,b)=>a+(b-cMean)**2,0)/d);
+  document.getElementById('mStdC').textContent=cStd.toFixed(4);
+
+  const nBins=24;
+  const aBins=new Array(nBins).fill(0);
+  const aLabels=[];
+  for(let i=0;i<nBins;i++){
+    aLabels.push(Math.round(i*90/nBins)+'°');
+    angles.forEach(a=>{if(a>=i*90/nBins&&a<(i+1)*90/nBins)aBins[i]++;});
+  }
+
+  mkChart('angleHist','bar',{
+    data:{labels:aLabels,datasets:[{data:aBins,backgroundColor:blue+'77',borderColor:blue,borderWidth:1,barPercentage:1,categoryPercentage:1}]},
+    options:{responsive:true,maintainAspectRatio:false,animation:false,
+      scales:{x:{ticks:{maxTicksLimit:6,color:txtC,font:{size:11}},grid:{color:grayG},title:{display:true,text:'angle between x and row of Π',color:txtC,font:{size:11}}},
+        y:{ticks:{color:txtC,font:{size:11}},grid:{color:grayG},beginAtZero:true}},
+      plugins:{legend:{display:false},tooltip:{enabled:false}}}
+  });
+
+  const show=Math.min(64,d);
+  const cLabels=Array.from({length:show},(_,i)=>i+1);
+
+  mkChart('coordBars','bar',{
+    data:{labels:cLabels,datasets:[{data:newCoords.slice(0,show),
+      backgroundColor:newCoords.slice(0,show).map(v=>v>=0?teal+'77':teal+'44'),
+      borderColor:teal,borderWidth:1}]},
+    options:{responsive:true,maintainAspectRatio:false,animation:false,
+      scales:{x:{ticks:{display:false},grid:{display:false},title:{display:true,text:'coordinate index (= row of Π)',color:txtC,font:{size:11}}},
+        y:{ticks:{color:txtC,font:{size:11}},grid:{color:grayG}}},
+      plugins:{legend:{display:false},tooltip:{enabled:false}}}
+  });
+
+  mkChart('beforeAfter','bar',{
+    data:{labels:cLabels,datasets:[
+      {label:'original',data:x.slice(0,show),backgroundColor:coral+'66',borderColor:coral,borderWidth:1},
+      {label:'rotated',data:newCoords.slice(0,show),backgroundColor:teal+'66',borderColor:teal,borderWidth:1}
+    ]},
+    options:{responsive:true,maintainAspectRatio:false,animation:false,
+      scales:{x:{ticks:{display:false},grid:{display:false}},y:{ticks:{color:txtC,font:{size:11}},grid:{color:grayG}}},
+      plugins:{legend:{display:false},tooltip:{enabled:false}}}
+  });
+
+  const sweepDims=[2,3,5,10,20,50,100,200,500];
+  const sweepStd=sweepDims.map(dd=>{
+    const xx=new Array(dd).fill(0);xx[0]=1;
+    const angs=[];
+    const trials=Math.min(200,Math.max(20,Math.floor(3000/dd)));
+    for(let t=0;t<trials;t++){
+      const rv=normalize(Array.from({length:dd},()=>gauss()));
+      const dp=dot(rv,xx);
+      angs.push(Math.acos(Math.min(1,Math.max(-1,Math.abs(dp))))*180/Math.PI);
+    }
+    const m=angs.reduce((a,b)=>a+b,0)/angs.length;
+    return Math.sqrt(angs.reduce((a,b)=>a+(b-m)**2,0)/angs.length);
+  });
+
+  mkChart('angleSweep','line',{
+    data:{labels:sweepDims.map(String),datasets:[
+      {data:sweepStd,borderColor:blue,borderWidth:2.5,pointRadius:5,pointBackgroundColor:blue,fill:false,tension:0.3}
+    ]},
+    options:{responsive:true,maintainAspectRatio:false,animation:false,
+      scales:{x:{title:{display:true,text:'dimension d',color:txtC,font:{size:11}},ticks:{color:txtC,font:{size:11}},grid:{color:grayG}},
+        y:{title:{display:true,text:'std dev of angles (degrees)',color:txtC,font:{size:11}},ticks:{color:txtC,font:{size:11}},grid:{color:grayG},min:0}},
+      plugins:{legend:{display:false},tooltip:{enabled:false}}}
+  });
+}
+
+document.getElementById('dS').addEventListener('input',()=>{document.getElementById('dO').textContent=document.getElementById('dS').value;});
+document.getElementById('dS').addEventListener('change',run);
+document.getElementById('bSpiky').addEventListener('click',()=>{currentType='spiky';run();});
+document.getElementById('bSpread').addEventListener('click',()=>{currentType='spread';run();});
+document.getElementById('bReroll').addEventListener('click',run);
+run();
+</script>
